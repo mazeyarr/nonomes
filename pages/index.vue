@@ -149,6 +149,19 @@ export default {
     if (this.device.isSmall)
       this.$store.dispatch('pages/animateSection', 'intro-over')
   },
+  head() {
+    return {
+      title: 'S.V.A.A. NoNoMes',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: `S.V.A.A. Nomen Non Magnum Est, kortweg NoNoMes, is een bruisende studentengezelligheidsvereniging met meer dan 300 actieve leden. Haar sociëteit is gevestigd in hartje Amsterdam op een steenworp afstand van de Dam. NoNoMes wordt gekenmerkt door haar jonge en groeiende karakter. Ieder jaar worden er verschillende activiteiten georganiseerd, waarbij de wekelijkse borrel op dinsdag centraal staat`
+        }
+      ]
+    }
+  },
   methods: {
     ...mapActions({
       animateSection: 'pages/animateSection'

@@ -57,7 +57,7 @@
               </nuxt-link>
             </mdb-dropdown-menu>
           </mdb-dropdown>
-          <mdb-nav-item anchor-class="white-text" to="/over">
+          <mdb-nav-item anchor-class="white-text" to="/gallerij">
             Foto's
           </mdb-nav-item>
 

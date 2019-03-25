@@ -1,12 +1,13 @@
 <template>
   <div>
     <mdb-carousel
-      :interval="2000"
+      :interval="5000"
       showControls
       showIndicators
       multi
       slide
       top
+      touch
       navClass="btn-success"
       indicatorClass="success-color"
     >
