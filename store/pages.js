@@ -2,17 +2,7 @@ export const state = () => {
   return {
     loaded: false,
     loading: false,
-    pages: [
-      {
-        name: 'Home',
-        index: true,
-        active: true
-      },
-      {
-        name: 'contact',
-        active: false
-      }
-    ],
+    pages: [],
     sections: [
       {
         name: 'intro-over',
@@ -45,7 +35,7 @@ export const state = () => {
               content: `<article><p class="text-black">S.V.A.A. Nomen Non Magnum Est, kortweg NoNoMes,
                     is een bruisende studentengezelligheidsvereniging
                     met meer dan 300 actieve leden. <br><br>
-  
+
                     Haar sociëteit is
                     gevestigd in hartje Amsterdam op een steenworp afstand
                     van de Dam. NoNoMes wordt gekenmerkt door haar jonge en
@@ -411,6 +401,13 @@ export const getters = {
 }
 
 export const mutations = {
+  SET_PAGES(state, pages) {
+    pages.forEach(page => state.pages.push(page))
+  },
+  SET_SECTIONS(state, sections) {
+    sections.forEach(section => state.sections.push(section))
+    console.log(sections)
+  },
   toggleLoading(state, option) {
     state.loading = option
     state.loaded = !option

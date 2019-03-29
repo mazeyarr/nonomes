@@ -15,15 +15,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import { mdbSpinner } from 'mdbvue'
 export default {
   name: 'Loader',
   components: {
     mdbSpinner
   },
-  data: () => ({
-    loading: false
-  }),
+  computed: {
+    ...mapGetters({
+      loading: 'core/GET_LOADING'
+    })
+  },
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
@@ -32,12 +35,10 @@ export default {
   },
   methods: {
     start() {
-      this.$store.commit('pages/toggleLoading', true)
-      this.loading = true
+      this.$store.commit('core/SET_LOADING', true)
     },
     finish() {
-      this.$store.commit('pages/toggleLoading', false)
-      this.loading = false
+      this.$store.commit('core/SET_LOADING', false)
     }
   }
 }

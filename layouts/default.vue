@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Loader />
     <FloatingMenu />
     <nuxt />
     <GuestModal />
@@ -8,12 +7,10 @@
 </template>
 
 <script>
-import Loader from '@/components/Loader.vue'
 import GuestModal from '@/components/modals/GuestModal/GuestModal.vue'
 import FloatingMenu from '@/components/FloatingMenu.vue'
 export default {
   components: {
-    Loader,
     GuestModal,
     FloatingMenu
   }

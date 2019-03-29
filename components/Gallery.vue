@@ -7,7 +7,6 @@
       multi
       slide
       top
-      touch
       navClass="btn-success"
       indicatorClass="success-color"
     >

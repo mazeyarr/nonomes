@@ -1,7 +1,7 @@
 export default function({ app, route, isDev }) {
   if (isDev) {
     console.info(
-      ` %c route-name: ${route.name} `,
+      ` %c [ac-pa] | route-name: ${route.name} `,
       'background: #4284F4; color: #fff'
     )
   }

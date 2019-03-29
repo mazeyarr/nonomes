@@ -22,7 +22,7 @@ module.exports = {
   loading: '~/components/Loader.vue',
 
   router: {
-    middleware: 'active-page'
+    middleware: ['load-store', 'active-page']
   },
 
   /*
