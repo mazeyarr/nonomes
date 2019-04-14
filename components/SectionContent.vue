@@ -1,79 +1,94 @@
 <template>
-  <article class="h-100" :class="section(sectionName).styleClasses">
-    <mdb-row
-      v-if="section(sectionName).title !== ''"
-      class="mt-5"
-      center
-    >
-      <div v-if="section(sectionName).title !== ''">
-        <div
-          v-if="section(sectionName).title.type === 'html'"
-          :class="section(sectionName).title.styleClasses"
-          v-html="sanitize(section(sectionName).title.text)"
-        />
-        <h2
-          v-if="section(sectionName).title.type === 'plain'"
-          :class="section(sectionName).title.styleClasses"
-          v-text="section(sectionName).title.text"
-        />
-      </div>
-    </mdb-row>
-
-    <mdb-row
-      v-if="section(sectionName).preContent !== ''"
-      :class="section(sectionName).preContent.styleClasses"
-      :around="section(sectionName).preContent.position.around"
-      :between="section(sectionName).preContent.position.between"
-      :center="section(sectionName).preContent.position.center"
-      :end="section(sectionName).preContent.position.end"
-      :start="section(sectionName).preContent.position.start"
-    >
-      <mdb-col
-        class="pl-5 pr-5"
-        :sm="section(sectionName).preContent.colSize.sm"
-        :md="section(sectionName).preContent.colSize.md"
-        :lg="section(sectionName).preContent.colSize.lg"
+  <mdb-row :tag="section.tag" class="h-100" :class="section.styleClasses">
+    <div v-if="section.type === 'default'" class="w-100">
+      <mdb-row
+        v-if="section.title !== null"
+        class="mt-5"
+        center
       >
-        <article v-html="sanitize(section(sectionName).preContent.content)" />
-      </mdb-col>
-    </mdb-row>
-
-    <mdb-row
-      :class="section(sectionName).styleClasses"
-      :around="section(sectionName).contentPosition.around"
-      :between="section(sectionName).contentPosition.between"
-      :center="section(sectionName).contentPosition.center"
-      :end="section(sectionName).contentPosition.end"
-      :start="section(sectionName).contentPosition.start"
-    >
-      <mdb-col
-        v-for="(content, index) in section(sectionName).content"
-        :key="content.id"
-        :class="content.styleClasses"
-        :sm="content.colSize.sm"
-        :md="content.colSize.md"
-      >
-        <div v-if="content.title !== ''">
-          <div :class="content.title.styleClasses" v-html="content.title.type === 'html' ? sanitize(content.title.text) : ''" />
+        <div v-if="section.title !== null">
+          <div
+            v-if="section.title.type === 'html'"
+            :class="section.title.styleClasses"
+            v-html="sanitize(section.title.text)"
+          />
           <h2
-            v-if="content.title.type === 'plain'"
-            :class="content.title.styleClasses"
-          >
-            {{ content.title.text }}
-          </h2>
+            v-if="section.title.type === 'plain'"
+            :class="section.title.styleClasses"
+            v-text="section.title.text"
+          />
         </div>
+      </mdb-row>
 
-        <div
-          v-if="content.body !== '' && content.body.type === 'html'"
-          :class="content.body.styleClasses"
-          v-html="sanitize(content.body.content)"
-        />
+      <mdb-row
+        v-if="section.preContent !== null"
+        :class="section.preContent.content.styleClasses"
+        :around="section.preContent.position.around"
+        :between="section.preContent.position.between"
+        :center="section.preContent.position.center"
+        :end="section.preContent.position.end"
+        :start="section.preContent.position.start"
+        tag="article"
+      >
+        <mdb-col
+          class="pl-5 pr-5"
+          :sm="section.preContent.colSize.sm"
+          :md="section.preContent.colSize.md"
+          :lg="section.preContent.colSize.lg"
+        >
+          <div v-html="sanitize(section.preContent.content.text)" />
+        </mdb-col>
+      </mdb-row>
 
-        <slot v-if="hasDefaultSlot && index === slotIndex" />
-      </mdb-col>
-    </mdb-row>
+      <mdb-row
+        :class="section.styleClasses"
+        :around="section.contentPosition.around"
+        :between="section.contentPosition.between"
+        :center="section.contentPosition.center"
+        :end="section.contentPosition.end"
+        :start="section.contentPosition.start"
+      >
+        <mdb-col
+          v-for="(content, index) in section.content"
+          :key="content.id"
+          :class="content.styleClasses"
+          :sm="content.colSize.sm"
+          :md="content.colSize.md"
+          :tag="content.tag"
+        >
+          <div v-if="content.title !== null">
+            <div
+              v-if="content.title.type === 'html'"
+              :class="content.title.styleClasses"
+              v-html="sanitize(content.title.text)"
+            />
+            <h2
+              v-if="content.title.type === 'plain'"
+              :class="content.title.styleClasses"
+              v-text="content.title.text"
+            />
+          </div>
+
+          <div
+            v-if="content.body !== null && content.body.type === 'html'"
+            :class="content.body.styleClasses"
+            v-html="sanitize(content.body.text)"
+          />
+
+          <slot v-if="hasDefaultSlot && index === slotIndex" />
+        </mdb-col>
+      </mdb-row>
+    </div>
+    <div v-else-if="section.type === 'custom'" class="w-100">
+      <component
+        :is="componentLoader"
+        :section-name="section.name"
+        :class="section.styleClasses"
+        text-color="white"
+      />
+    </div>
     <slot name="footer" />
-  </article>
+  </mdb-row>
 </template>
 
 <script>
@@ -116,9 +131,15 @@ export default {
     hasDefaultSlot() {
       return !!this.$slots.default
     },
+    section() {
+      return this.getSection(this.sectionName)
+    },
     ...mapGetters({
-      section: 'pages/sectionFindByName'
-    })
+      getSection: 'pages/sectionFindByName'
+    }),
+    componentLoader() {
+      return () => import(`@/components/${this.section.component}.vue`)
+    }
   },
   created() {
     this.handleSlot()

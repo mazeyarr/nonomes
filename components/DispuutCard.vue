@@ -7,8 +7,10 @@
 
     <mdb-card-body cascade>
       <mdb-card-title><strong>{{ name }}</strong></mdb-card-title>
-      <mdb-card-text>{{ description }}</mdb-card-text>
-      <mdb-btn color="unique">
+      <mdb-card-text class="mb-5">
+        {{ description }}
+      </mdb-card-text>
+      <mdb-btn color="unique" class="read-more">
         <mdb-icon icon="book" />
         Lees meer
       </mdb-btn>
@@ -70,5 +72,10 @@ export default {
 }
 .odd {
   background-color: #51a16f;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 10px;
 }
 </style>

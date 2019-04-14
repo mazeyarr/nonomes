@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
   <div class="home">
     <NavBar class-prop="position-absolute" />
     <mdb-container fluid>
@@ -20,7 +20,7 @@
               section-name="intro-over"
               slot-first
             >
-              <GuestModalTrigger class="mb-5 mb-md-0" type="button" color="success">
+              <GuestModalTrigger :modal-id="1" class="mb-5 mb-md-0" type="button" color="success">
                 Word Lid!
               </GuestModalTrigger>
 
@@ -69,9 +69,9 @@
               slot-first
             >
               <template v-slot:footer>
-                <mdb-row class="mb-5" center>
+                <mdb-row class="mb-5 w-100" center>
                   <mdb-col col="6">
-                    <GuestModalTrigger type="button" block color="success">
+                    <GuestModalTrigger :modal-id="1" type="button" block color="success">
                       Ik wil me inschrijven !
                     </GuestModalTrigger>
                   </mdb-col>
@@ -85,9 +85,9 @@
       <intersect @enter="animateSection('intro-gallery')">
         <page-section id="intro-gallery">
           <transition name="page-intro-slide-right">
-            <Gallery
+            <SectionContent
               v-show="sectionFindByName('intro-gallery').show"
-              class="mb-5 mt-5"
+              section-name="intro-gallery"
             />
           </transition>
         </page-section>
@@ -98,12 +98,10 @@
           id="intro-contact"
           class="odd"
         >
-          <transition name="page-intro-zoom">
-            <Contact
+          <transition name="page-intro-slide-top">
+            <SectionContent
               v-show="sectionFindByName('intro-contact').show"
               section-name="intro-contact"
-              text-color="white"
-              class="pb-5 pt-5"
             />
           </transition>
         </page-section>
@@ -116,12 +114,10 @@
 import { mapGetters, mapActions } from 'vuex'
 import NavBar from '@/components/NavBar'
 import HomeCarousel from '@/components/HomeCarousel.vue'
-import Contact from '@/components/Contact.vue'
 import PageSection from '@/components/PageSection.vue'
 import SectionContent from '@/components/SectionContent.vue'
-import Gallery from '@/components/Gallery.vue'
 import Intersect from 'vue-intersect'
-import GuestModalTrigger from '@/components/modals/GuestModal/Trigger.vue'
+import GuestModalTrigger from '@/components/modals/Default/Trigger.vue'
 
 import { mdbContainer, mdbRow, mdbCol } from 'mdbvue'
 
@@ -134,8 +130,6 @@ export default {
     HomeCarousel,
     'page-section': PageSection,
     SectionContent,
-    Contact,
-    Gallery,
     Intersect,
     GuestModalTrigger
   },

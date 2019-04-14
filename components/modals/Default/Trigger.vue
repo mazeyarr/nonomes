@@ -1,5 +1,5 @@
 <template>
-  <div @click="show(modal)">
+  <div @click="show(modalId)">
     <mdb-btn
       v-if="type === 'button'"
       :block="block"
@@ -21,6 +21,10 @@ export default {
     mdbBtn
   },
   props: {
+    modalId: {
+      required: true,
+      type: Number
+    },
     type: {
       required: true,
       default: '',
@@ -34,11 +38,6 @@ export default {
     block: {
       required: false,
       type: Boolean
-    }
-  },
-  data() {
-    return {
-      modal: 'guest-register-modal'
     }
   },
   methods: {

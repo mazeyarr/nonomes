@@ -1,16 +1,12 @@
 <template>
-  <div class="odd p-5">
-    <h2 :style="{color: textColor}" class="h1-responsive font-weight-bold text-center">
+  <div class="odd pl-5 pr-5 pt-5">
+    <h2 :style="{color: textColor}" class="d-none d-md-block h1-responsive font-weight-bold text-center">
       Contact
     </h2>
-    <p :style="{color: textColor}" class="text-center w-responsive mx-auto pb-5">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Fugit, error amet numquam iure provident voluptate esse quasi,
-      veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.
-    </p>
+    <p :style="{color: textColor}" class="text-center w-responsive mx-auto" />
     <mdb-row>
       <transition name="page-intro-slide-top">
-        <mdb-col v-show="objectsToAnimate.form.show" lg="5" class="lg-0 mb-4">
+        <mdb-col v-show="objectToAnimate(sectionName,'form').show" lg="5" class="lg-0 mb-4">
           <mdb-card>
             <mdb-card-body>
               <div class="form-header green accent-3">
@@ -19,9 +15,7 @@
                   Stuur een berichtje:
                 </h3>
               </div>
-              <p class="dark-grey-text">
-                Wij proberen je z.s.m te beantwoorden
-              </p>
+              <p class="dark-grey-text" />
               <div class="md-form">
                 <mdb-input
                   id="form-name"
@@ -68,7 +62,7 @@
       </transition>
 
       <transition name="page-intro-slide-right">
-        <mdb-col v-show="objectsToAnimate.map.show" lg="7">
+        <mdb-col v-show="objectToAnimate(sectionName,'map').show" lg="7">
           <div id="map-container" class="rounded z-depth-1-half map-container" style="height: 400px">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.799628632169!2d4.8942665158363265!3d52.37405315478739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609b884e1ae2b%3A0x2ff5eade9ee128ec!2sStudentenvereniging+NoNoMes!5e0!3m2!1snl!2snl!4v1551459565511"
@@ -82,7 +76,7 @@
           <address>
             <mdb-row class="text-center">
               <transition name="page-intro-zoom">
-                <mdb-col v-show="objectsToAnimate.locationIcon.show" md="4">
+                <mdb-col v-show="objectToAnimate(sectionName,'locationIcon').show" md="4">
                   <mdb-btn tag="a" floating color="yellow" class="accent-2" @click="navigateTo">
                     <mdb-icon icon="map-marker" />
                   </mdb-btn>
@@ -96,7 +90,7 @@
               </transition>
 
               <transition name="page-intro-zoom">
-                <mdb-col v-show="objectsToAnimate.phoneIcon.show" md="4">
+                <mdb-col v-show="objectToAnimate(sectionName,'phoneIcon').show" md="4">
                   <mdb-btn tag="a" href="tel:+310206273067" floating color="green" class="accent-2">
                     <mdb-icon icon="phone" />
                   </mdb-btn>
@@ -112,7 +106,7 @@
               </transition>
 
               <transition name="page-intro-zoom">
-                <mdb-col v-show="objectsToAnimate.emailIcon.show" md="4">
+                <mdb-col v-show="objectToAnimate(sectionName,'emailIcon').show" md="4">
                   <mdb-btn tag="a" href="mailto:info@nonomes.nl" floating color="purple" class="accent-2">
                     <mdb-icon icon="envelope" />
                   </mdb-btn>
@@ -172,9 +166,12 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ sectionFindByName: 'pages/sectionFindByName' }),
-    objectsToAnimate: function() {
-      return this.sectionFindByName(this.sectionName).objectsToAnimate
+    ...mapGetters({
+      sectionFindByName: 'pages/sectionFindByName',
+      objectToAnimate: 'pages/GET_OBJECT_TO_ANIMATE_BY_NAME'
+    }),
+    section() {
+      return this.sectionFindByName(this.sectionName)
     }
   },
   methods: {

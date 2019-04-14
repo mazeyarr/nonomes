@@ -44,7 +44,8 @@ Vue.use(VueSanitizeHtml, {
     div: ['class'],
     figure: ['class'],
     h1: ['class'],
-    span: ['class']
+    span: ['class'],
+    p: ['class']
   },
   selfClosing: ['img', 'br', 'hr', 'area', 'base', 'meta'],
   allowedSchemes: ['http', 'https', 'mailto'],

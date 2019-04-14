@@ -24,8 +24,11 @@ export const getters = {
 
 export const mutations = {
   SET_STORE(state, { store, data }) {
+    // store.commit('pages/SET_ARTICLES', data.articles)
     store.commit('pages/SET_PAGES', data.pages)
     store.commit('pages/SET_SECTIONS', data.sections)
+    store.commit('modals/ADD_MODALS', data.modals)
+    store.commit('forms/ADD_FORMS', data.forms)
   },
   SET_LOADING(state, toggle) {
     state.loading = toggle
@@ -46,7 +49,7 @@ export const actions = {
     return new Promise(resolve => {
       commit('SET_LOADING', true)
       axios.get(`${state.apiBaseUrl}/store`).then(resp => {
-        console.log(resp)
+        // console.log(resp)
         commit('SET_STORE', { store, data: resp.data.store })
         commit('SET_LOADED_STORE', true)
         commit('SET_LOADING', false)

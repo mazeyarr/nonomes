@@ -1,18 +1,24 @@
 <template>
-  <mdb-modal v-if="modal('guest-register-modal').show" @close="hide(name)">
+  <mdb-modal v-if="modal.show" @close="hide(modal.id)">
     <mdb-modal-header>
-      <mdb-modal-title>Inschrijven</mdb-modal-title>
+      <mdb-modal-title>{{ modal.title }}</mdb-modal-title>
     </mdb-modal-header>
     <mdb-modal-body>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Ex, harum ipsa minus neque omnis similique. Accusantium ad autem ea
-      enim expedita in minima neque placeat qui, sit, soluta voluptatem voluptatibus?
+      <p class="text-center py-2">
+        {{ modal.description }}
+      </p>
+
+      <FormBuilder
+        v-if="modal.hasForm"
+        :id="modal.form.id"
+        ref="form"
+      />
     </mdb-modal-body>
     <mdb-modal-footer>
-      <mdb-btn color="secondary" @click.native="hide(name)">
+      <mdb-btn color="danger" icon="times" @click.native="hide(modal.id)">
         Close
       </mdb-btn>
-      <mdb-btn color="primary">
+      <mdb-btn color="success" icon="paper-plane" iconRight @click="send">
         Inschrijven!
       </mdb-btn>
     </mdb-modal-footer>
@@ -21,6 +27,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import FormBuilder from '@/components/form/FormBuilder'
 import {
   mdbModal,
   mdbModalTitle,
@@ -37,22 +44,21 @@ export default {
     mdbModalBody,
     mdbModalFooter,
     mdbModalHeader,
-    mdbBtn
-  },
-  data() {
-    return {
-      name: 'guest-register-modal'
-    }
+    mdbBtn,
+    FormBuilder
   },
   computed: {
     ...mapGetters({
-      modal: 'modals/modalFindByName'
+      modal: 'modals/GET_ACTIVE_MODAL'
     })
   },
   methods: {
     ...mapMutations({
       hide: 'modals/hide'
-    })
+    }),
+    send() {
+      this.$refs.form.submit()
+    }
   }
 }
 </script>

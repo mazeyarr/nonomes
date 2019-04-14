@@ -44,15 +44,15 @@
                 De Disputen
               </nuxt-link>
 
-              <nuxt-link class="dropdown-item" to="/over/nonomes/reunisten">
-                Reunisten
+              <nuxt-link class="dropdown-item" to="/over/nonomes/1/reunisten">
+                Reunistschap
               </nuxt-link>
 
-              <nuxt-link class="dropdown-item" to="/over/nonomes/maatschappelijk">
-                Maatschappelijk
-              </nuxt-link>
+              <!--<nuxt-link class="dropdown-item" to="/over/nonomes/2/maatschappelijk">-->
+              <!--Maatschappelijk-->
+              <!--</nuxt-link>-->
 
-              <nuxt-link class="dropdown-item" to="/over/nonomes/privacybeleid">
+              <nuxt-link class="dropdown-item" to="/over/nonomes/3/privacybeleid">
                 Privacybeleid
               </nuxt-link>
             </mdb-dropdown-menu>
@@ -61,7 +61,7 @@
             Foto's
           </mdb-nav-item>
 
-          <GuestModalTrigger type="in-case">
+          <GuestModalTrigger :modal-id="1" type="in-case">
             <mdb-nav-item anchor-class="white-text">
               Word lid!
             </mdb-nav-item>
@@ -73,10 +73,18 @@
         <mdb-navbar-nav left>
           <mdb-nav-item
             anchor-class="white-text"
-            to="/over/nonomes/Q&A"
+            to="/over/nonomes/4/Q&A"
             :class="activeRoute === '/over/nonomes/Q&A' ? 'active' : ''"
           >
             Q&A
+          </mdb-nav-item>
+
+          <mdb-nav-item
+            anchor-class="white-text"
+            to="/over/nonomes/disputen"
+            :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"
+          >
+            Disputen
           </mdb-nav-item>
 
           <mdb-nav-item
@@ -85,14 +93,6 @@
             :class="activeRoute === '/sponsors' ? 'active' : ''"
           >
             Sponsors
-          </mdb-nav-item>
-
-          <mdb-nav-item
-            anchor-class="white-text"
-            to="/over/nonomes/bedrijven"
-            :class="activeRoute === '/over/nonomes/bedrijven' ? 'active' : ''"
-          >
-            Bedrijven
           </mdb-nav-item>
 
           <mdb-nav-item
@@ -110,7 +110,7 @@
 
 <script>
 import NavBarMobile from '@/components/NavBarMobile.vue'
-import GuestModalTrigger from '@/components/modals/GuestModal/Trigger.vue'
+import GuestModalTrigger from '@/components/modals/Default/Trigger.vue'
 
 import {
   mdbNavbar,

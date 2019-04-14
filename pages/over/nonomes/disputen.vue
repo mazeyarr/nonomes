@@ -53,11 +53,11 @@
             v-for="dispuut in disputen.male"
             v-show="dispuut.show"
             :key="dispuut.name"
-            class="mt-3"
+            class="mt-3 mb-3"
             md="3"
             sm="6"
           >
-            <DispuutCard :name="dispuut.name" :description="dispuut.description" :logo-src="dispuut.logoSrc" />
+            <DispuutCard class="h-100" :name="dispuut.name" :description="dispuut.description" :logo-src="dispuut.logoSrc" />
           </mdb-col>
 
           <mdb-col
@@ -68,7 +68,7 @@
             md="2"
             sm="4"
           >
-            <DispuutCard :name="dispuut.name" :description="dispuut.description" :logo-src="dispuut.logoSrc" />
+            <DispuutCard class="h-100" :name="dispuut.name" :description="dispuut.description" :logo-src="dispuut.logoSrc" />
           </mdb-col>
         </transition-group>
       </PageSection>

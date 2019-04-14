@@ -1,5 +1,10 @@
 <template>
-  <mdb-navbar id="navbar" class="p-3 pr-4 position-fixed bg-nonomes-blue" dark>
+  <mdb-navbar
+    id="navbar"
+    class="p-3 pr-4 position-fixed bg-nonomes-blue"
+    :style="opacity !== 0 ? `opacity: ${opacity};` : `opacity: 0.2;`"
+    dark
+  >
     <!-- Navbar brand -->
     <mdb-navbar-brand class="text-white" center>
       <nuxt-link to="/">
@@ -46,33 +51,43 @@
               De Disputen
             </nuxt-link>
 
-            <nuxt-link class="dropdown-item" to="/over/nonomes/reunisten">
+            <nuxt-link class="dropdown-item" to="/over/nonomes/1/reunisten">
               Reunisten
             </nuxt-link>
 
-            <nuxt-link class="dropdown-item" to="/over/nonomes/maatschappelijk">
-              Maatschappelijk
-            </nuxt-link>
+            <!--<nuxt-link class="dropdown-item" to="/over/nonomes/2/maatschappelijk">-->
+            <!--Maatschappelijk-->
+            <!--</nuxt-link>-->
 
-            <nuxt-link class="dropdown-item" to="/over/nonomes/privacybeleid">
+            <nuxt-link class="dropdown-item" to="/over/nonomes/3/privacybeleid">
               Privacybeleid
             </nuxt-link>
           </mdb-dropdown-menu>
         </mdb-dropdown>
-        <mdb-nav-item anchor-class="white-text" to="/over">
+        <mdb-nav-item anchor-class="white-text" to="/gallerij">
           Foto's
         </mdb-nav-item>
 
-        <mdb-nav-item anchor-class="white-text">
-          Word lid!
+        <GuestModalTrigger :modal-id="1" type="in-case">
+          <mdb-nav-item anchor-class="white-text">
+            Word lid!
+          </mdb-nav-item>
+        </GuestModalTrigger>
+
+        <mdb-nav-item
+          anchor-class="white-text"
+          to="/over/nonomes/4/Q&A"
+          :class="activeRoute('/over/nonomes/Q&A')"
+        >
+          Q&A
         </mdb-nav-item>
 
         <mdb-nav-item
           anchor-class="white-text"
-          to="/over/nonomes/Q&A"
-          :class="activeRoute('/over/nonomes/Q&A')"
+          to="/over/nonomes/disputen"
+          :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"
         >
-          Q&A
+          Disputen
         </mdb-nav-item>
 
         <mdb-nav-item
@@ -81,14 +96,6 @@
           :class="activeRoute('/sponsors')"
         >
           Sponsors
-        </mdb-nav-item>
-
-        <mdb-nav-item
-          anchor-class="white-text"
-          to="/over/nonomes/bedrijven"
-          :class="activeRoute('')"
-        >
-          Bedrijven
         </mdb-nav-item>
 
         <mdb-nav-item
@@ -114,6 +121,7 @@ import {
   mdbDropdownMenu,
   mdbDropdownToggle
 } from 'mdbvue'
+import ModalTrigger from '@/components/modals/Default/Trigger.vue'
 
 export default {
   name: 'NavBarMobile',
@@ -125,9 +133,31 @@ export default {
     mdbNavbarBrand,
     mdbDropdown,
     mdbDropdownMenu,
-    mdbDropdownToggle
+    mdbDropdownToggle,
+    GuestModalTrigger: ModalTrigger
+  },
+  data() {
+    return {
+      documentInitHeight: 0,
+      opacity: 0
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  mounted() {
+    this.documentInitHeight = document.body.offsetHeight
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    handleScroll() {
+      const calculatePositionOnPage =
+        window.pageYOffset /
+        (this.documentInitHeight / this.documentInitHeight + 300)
+      this.opacity = calculatePositionOnPage < 1 ? calculatePositionOnPage : 1
+    },
     activeRoute(checkPath) {
       return this.$route.path === checkPath ? 'active' : ''
     }

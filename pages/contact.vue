@@ -2,7 +2,7 @@
   <main id="contact-page">
     <NavBar id="navbar" class-prop="bg-nonomes-blue position-relative" />
     <mdb-container fluid>
-      <PageSection id="contact-section">
+      <PageSection id="contact-section pt-5">
         <ContactView section-name="intro-contact" text-color="black" />
       </PageSection>
     </mdb-container>

@@ -22,6 +22,7 @@
     "bootstrap": "^4.1.3",
     "bootstrap-vue": "^2.0.0-rc.11",
     "cross-env": "^5.2.0",
+    "form-serialize": "^0.7.2",
     "intersection-observer": "^0.5.1",
     "mdbvue": "git+https://oauth2:L2jN_rsgkb8iDpdKKmKC@git.mdbootstrap.com/mdb/vue/vu-pro.git",
     "nuxt": "^2.4.0",

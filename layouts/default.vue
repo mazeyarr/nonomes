@@ -2,16 +2,16 @@
   <div>
     <FloatingMenu />
     <nuxt />
-    <GuestModal />
+    <StandardModal />
   </div>
 </template>
 
 <script>
-import GuestModal from '@/components/modals/GuestModal/GuestModal.vue'
+import StandardModal from '@/components/modals/Default/index.vue'
 import FloatingMenu from '@/components/FloatingMenu.vue'
 export default {
   components: {
-    GuestModal,
+    StandardModal,
     FloatingMenu
   }
 }
@@ -24,6 +24,13 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+html,
+.container,
+.container-fluid {
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
 }
 
 * {
@@ -152,6 +159,11 @@ h2 {
       endColorstr='#3bb56a',
       GradientType=1
     );
+}
+
+.icon-freeze {
+  font-size: 1rem !important;
+  transform: translate(0) !important;
 }
 
 .page-enter-active,
