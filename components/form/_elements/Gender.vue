@@ -1,39 +1,41 @@
 <template>
-  <mdb-view>
+  <div>
     <mdb-icon class="d-inline-block" icon="venus-mars" size="2x" />
     <p class="d-inline-block mb-0">
       {{ element.placeholder }}
     </p>
     <mdb-input
       :id="`${element.name}-${element.id}-man`"
-      class="icon-freeze"
       :name="element.name"
       type="radio"
       icon="mars"
+      iconClass="icon-align"
       label="Heer"
       labelClass="icon-freeze"
       value="1"
+      required
     />
     <mdb-input
       :id="`${element.name}-${element.name}-women`"
-      class="icon-freeze"
+      ref="radioWomen"
       :name="element.name"
       type="radio"
       icon="venus"
+      iconClass="icon-align"
       label="Dame"
-      labelClass="icon-freeze"
       value="0"
+      required
+      :invalidFeedback="element.error"
     />
-  </mdb-view>
+  </div>
 </template>
 
 <script>
-import { mdbInput, mdbView, mdbIcon } from 'mdbvue'
+import { mdbInput, mdbIcon } from 'mdbvue'
 export default {
   name: 'Gender',
   components: {
     mdbInput,
-    mdbView,
     mdbIcon
   },
   props: {
@@ -94,9 +96,21 @@ export default {
         women: false
       }
     }
+  },
+  mounted() {
+    for (const index in this.$refs.radioWomen.$el.children) {
+      const child = this.$refs.radioWomen.$el.children[index]
+
+      if (child instanceof HTMLInputElement) {
+        child.removeAttribute('checked')
+      }
+    }
   }
 }
 </script>
 
-<style scoped>
+<style>
+.icon-align {
+  min-width: 15px;
+}
 </style>

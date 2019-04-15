@@ -2,12 +2,13 @@
   <mdb-view>
     <mdb-input
       :id="`${element.name}-${element.id}`"
+      ref="checkboxTerm"
       type="checkbox"
       :class="element.styleClasses"
       :name="element.name"
-      :validate="element.validate"
       :group="element.group"
       :label="element.label"
+      required
       @change="change"
     />
     <input
@@ -67,6 +68,15 @@ export default {
   computed: {
     translateTermValue() {
       return this.value ? 1 : 0
+    }
+  },
+  mounted() {
+    for (const index in this.$refs.checkboxTerm.$el.children) {
+      const child = this.$refs.checkboxTerm.$el.children[index]
+
+      if (child instanceof HTMLInputElement) {
+        child.removeAttribute('checked')
+      }
     }
   },
   methods: {

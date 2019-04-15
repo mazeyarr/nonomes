@@ -62,10 +62,11 @@ export default {
       add_form: 'forms/ADD_FORM'
     }),
     ...mapActions({
-      set_erros: 'forms/do_set_form_error'
+      set_error: 'forms/do_set_form_element_error'
     }),
 
     async submit() {
+      this.$refs.form.classList.add('was-validated')
       // TODO: select method to pay with on response
       const { status, data } = await this.$axios.post(
         `/post/form/${this.id}`,
@@ -79,7 +80,7 @@ export default {
         }
       } else if (status === 203) {
         Object.keys(data).map(fieldName => {
-          this.set_erros({ formId: this.form.id, fieldName })
+          this.set_error({ formId: this.form.id, fieldName })
         })
       }
     }

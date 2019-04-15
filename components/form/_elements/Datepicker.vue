@@ -81,6 +81,9 @@ export default {
       }
     }
   },
+  mounted() {
+    // TODO: this.$refs.datepicker.$children[0].$el.children.*input*.addClass(*is-invalid || is-valid*)
+  },
   methods: {
     getPickerValue(value) {
       this.value = value
