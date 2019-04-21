@@ -8,6 +8,7 @@
     :danger="danger"
     @close="confirm = false"
   >
+    <slot></slot>
     <mdb-modal-header center :close="false">
       <p class="heading">
         {{ title }}

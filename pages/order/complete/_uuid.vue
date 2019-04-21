@@ -5,17 +5,9 @@
       <Invoice v-if="status.paid" :order="order" />
     </mdb-container>
 
-    <PaymentRetry
-      v-if="paymentRetryModal.show"
-      :order-uuid="uuid"
-      :paymentMethods="paymentRetryModal.paymentMethods"
-      @aborted="status.failed = true"
-      @failed="status.failed = true"
-    />
-
     <ConfirmModal
       :title="modalTitle"
-      :show="status.failed"
+      :show="status.failed || status.aborted"
       :success="paymentRetryModal.success"
       :warning="paymentRetryModal.warning"
       :danger="paymentRetryModal.danger"
@@ -23,7 +15,15 @@
       abortText="Annuleren"
       @confirmed="errorConfirm"
       @aborted="errorAbort"
-    />
+    >
+      <PaymentRetry
+        v-if="paymentRetryModal.show"
+        :order-uuid="uuid"
+        :paymentMethods="paymentRetryModal.paymentMethods"
+        @aborted="status.failed = true"
+        @failed="status.failed = true"
+      />
+    </ConfirmModal>
   </main>
 </template>
 
@@ -102,7 +102,6 @@ export default {
   },
   async asyncData({ params, error, $axios }) {
     const { data, status } = await $axios.get(`/order/get/${params.uuid}`)
-
     if (status === 203) {
       error({ statusCode: 404, message: 'Niet gevonden... 🤔' })
     }
@@ -110,7 +109,8 @@ export default {
     return data
   },
   mounted() {
-    if (this.status.failed) {
+    alert(1)
+    if (this.status.failed || this.status.aborted) {
       if (this.timePassed) {
         this.paymentRetryModal.warning = true
       } else {
