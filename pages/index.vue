@@ -144,6 +144,7 @@ export default {
       this.$store.dispatch('pages/animateSection', 'intro-over')
   },
   head() {
+    // TODO: make meta tags
     return {
       script: [{ src: '/head.js' }],
       title: 'Home',
