@@ -1,7 +1,7 @@
 <template>
   <div>
     <mdb-carousel
-      :interval="5000"
+      :interval="100000"
       showControls
       showIndicators
       multi
@@ -12,102 +12,72 @@
     >
       <mdb-carousel-item>
         <mdb-row class="mdb-lightbox px-2">
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(0)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox(0)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(2).jpg" class="img-fluid" alt="">
+              <img :src="imgs[0]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(1)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox(1)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(3).jpg" class="img-fluid" alt="">
+              <img :src="imgs[1]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(2)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox(2)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(4).jpg" class="img-fluid" alt="">
+              <img :src="imgs[2]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(3)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox(3)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(5).jpg" class="img-fluid" alt="">
-            </figure>
-          </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(4)">
-            <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(6).jpg" class="img-fluid" alt="">
-            </figure>
-          </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(5)">
-            <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(7).jpg" class="img-fluid" alt="">
+              <img :src="imgs[3]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
         </mdb-row>
       </mdb-carousel-item>
       <mdb-carousel-item>
         <mdb-row class="mdb-lightbox px-2">
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(0)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox2(0)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" class="img-fluid" alt="">
+              <img :src="imgs2[0]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(1)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox2(1)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(9).jpg" class="img-fluid" alt="">
+              <img :src="imgs2[1]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(2)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox2(2)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="img-fluid" alt="">
+              <img :src="imgs2[2]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(3)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox2(3)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(11).jpg" class="img-fluid" alt="">
-            </figure>
-          </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(4)">
-            <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg" class="img-fluid" alt="">
-            </figure>
-          </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(5)">
-            <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(13).jpg" class="img-fluid" alt="">
+              <img :src="imgs2[3]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
         </mdb-row>
       </mdb-carousel-item>
       <mdb-carousel-item>
         <mdb-row class="mdb-lightbox px-2">
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(0)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox3(0)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg" class="img-fluid" alt="">
+              <img :src="imgs3[0]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(1)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox3(1)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(15).jpg" class="img-fluid" alt="">
+              <img :src="imgs3[1]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(2)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox3(2)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(16).jpg" class="img-fluid" alt="">
+              <img :src="imgs3[2]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(3)">
+          <mdb-col md="6" class="d-md-inline-block" @click.native="showLightbox3(3)">
             <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(17).jpg" class="img-fluid" alt="">
-            </figure>
-          </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(4)">
-            <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" class="img-fluid" alt="">
-            </figure>
-          </mdb-col>
-          <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(5)">
-            <figure>
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(19).jpg" class="img-fluid" alt="">
+              <img :src="imgs3[3]" class="img-fluid" alt="">
             </figure>
           </mdb-col>
         </mdb-row>
@@ -155,28 +125,22 @@ export default {
   data() {
     return {
       imgs: [
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(2).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(3).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(4).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(5).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(6).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(7).jpg'
+        '/images/gallery/nonomes-gallery-1.jpeg',
+        '/images/gallery/nonomes-gallery-2.jpg',
+        '/images/gallery/nonomes-gallery-3.jpg',
+        '/images/gallery/nonomes-gallery-4.jpg'
       ],
       imgs2: [
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(8).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(9).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(11).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(12).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(13).jpg'
+        '/images/gallery/nonomes-gallery-5.jpg',
+        '/images/gallery/nonomes-gallery-6.jpg',
+        '/images/gallery/nonomes-gallery-7.jpg',
+        '/images/gallery/nonomes-gallery-8.jpg'
       ],
       imgs3: [
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(14).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(15).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(16).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(17).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(18).jpg',
-        'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(19).jpg'
+        '/images/gallery/nonomes-gallery-9.jpg',
+        '/images/gallery/nonomes-gallery-10.jpg',
+        '/images/gallery/nonomes-gallery-11.jpg',
+        '/images/gallery/nonomes-gallery-12.jpg'
       ],
       visible: false,
       visible2: false,
@@ -213,4 +177,8 @@ export default {
 </script>
 
 <style scoped>
+img {
+  min-height: 550px !important;
+  width: auto;
+}
 </style>

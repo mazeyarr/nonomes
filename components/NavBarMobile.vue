@@ -43,6 +43,10 @@
           </mdb-dropdown-toggle>
 
           <mdb-dropdown-menu>
+            <nuxt-link class="dropdown-item" to="/over">
+              NoNoMes
+            </nuxt-link>
+
             <nuxt-link class="dropdown-item" to="/over/nonomes/senaat">
               De Senaat
             </nuxt-link>
@@ -68,7 +72,7 @@
           Foto's
         </mdb-nav-item>
 
-        <GuestModalTrigger :modal-id="1" type="in-case">
+        <GuestModalTrigger :modal-id="2" type="in-case">
           <mdb-nav-item anchor-class="white-text">
             Word lid!
           </mdb-nav-item>
@@ -121,7 +125,7 @@ import {
   mdbDropdownMenu,
   mdbDropdownToggle
 } from 'mdbvue'
-import ModalTrigger from '@/components/modals/Default/Trigger.vue'
+import ModalTrigger from '@/components/modals/Standard/Trigger.vue'
 
 export default {
   name: 'NavBarMobile',

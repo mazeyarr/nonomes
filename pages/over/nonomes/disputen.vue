@@ -93,6 +93,18 @@ export default {
     mdbIcon,
     mdbBadge
   },
+  head() {
+    return {
+      title: `Disputen`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `NoNoMes heeft een disputen cultuur. Dit betekent dat de meeste leden aangesloten zijn bij een van de negen disputen van NoNoMes. Er zijn vier heren- en vijf damesdisputen met ieder haar eigen karakter. Lees hier over alle disputen.`
+        }
+      ]
+    }
+  },
   data() {
     return {
       genderSwitch: false,

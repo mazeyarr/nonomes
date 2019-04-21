@@ -20,7 +20,7 @@
               section-name="intro-over"
               slot-first
             >
-              <GuestModalTrigger :modal-id="1" class="mb-5 mb-md-0" type="button" color="success">
+              <GuestModalTrigger :modal-id="2" class="mb-5 mb-md-0" type="button" color="success">
                 Word Lid!
               </GuestModalTrigger>
 
@@ -71,7 +71,7 @@
               <template v-slot:footer>
                 <mdb-row class="mb-5 w-100" center>
                   <mdb-col col="6">
-                    <GuestModalTrigger :modal-id="1" type="button" block color="success">
+                    <GuestModalTrigger :modal-id="2" type="button" block color="success">
                       Ik wil me inschrijven !
                     </GuestModalTrigger>
                   </mdb-col>
@@ -117,7 +117,7 @@ import HomeCarousel from '@/components/HomeCarousel.vue'
 import PageSection from '@/components/PageSection.vue'
 import SectionContent from '@/components/SectionContent.vue'
 import Intersect from 'vue-intersect'
-import GuestModalTrigger from '@/components/modals/Default/Trigger.vue'
+import GuestModalTrigger from '@/components/modals/Standard/Trigger.vue'
 
 import { mdbContainer, mdbRow, mdbCol } from 'mdbvue'
 
@@ -145,13 +145,14 @@ export default {
   },
   head() {
     return {
-      title: 'S.V.A.A. NoNoMes',
+      script: [{ src: '/head.js' }],
+      title: 'Home',
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
-          content: `S.V.A.A. Nomen Non Magnum Est, kortweg NoNoMes, is een bruisende studentengezelligheidsvereniging met meer dan 300 actieve leden. Haar sociëteit is gevestigd in hartje Amsterdam op een steenworp afstand van de Dam. NoNoMes wordt gekenmerkt door haar jonge en groeiende karakter. Ieder jaar worden er verschillende activiteiten georganiseerd, waarbij de wekelijkse borrel op dinsdag centraal staat`
+          content: `S.V.A.A. Nomen Non Magnum est (NoNoMes) is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam. Jaarlijks organiseert NoNoMes de leukste activiteiten! <br><br>Denk aan de wekelijkse borrel op dinsdag, gala’s op de meest luxe locaties en onze jaarlijkse feestweek de Warmoesweek. NoNoMes heeft vijf dames- en vier herendisputen waarmee je samen eet, borrelt, studeert en misschien wel woont in Amsterdam. Met een lidmaatschap bij NoNoMes haal je alles uit je studentenleven!`
         }
       ]
     }

@@ -18,6 +18,18 @@ import { mdbContainer } from 'mdbvue'
 
 export default {
   name: 'Contact',
+  head() {
+    return {
+      title: 'Contact',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `T: 020 – 627 30 67 - M: 06 – 15592086 - E: extern@nonomes.nl - PR NoNoMes Warmoesstraat 119-1, 1012JA Amsterdam`
+        }
+      ]
+    }
+  },
   components: { PageSection, NavBar, mdbContainer, ContactView },
   mounted() {
     this.reAnimateObjects('intro-contact')

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import StandardModal from '@/components/modals/Default/index.vue'
+import StandardModal from '@/components/modals/Standard/index.vue'
 import FloatingMenu from '@/components/FloatingMenu.vue'
 export default {
   components: {

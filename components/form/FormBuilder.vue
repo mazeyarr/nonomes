@@ -1,5 +1,5 @@
 <template>
-  <form ref="form">
+  <form ref="form" novalidate @submit.prevent>
     <div
       v-if="form !== null"
       class="grey-text"
@@ -21,6 +21,13 @@
         />
       </div>
     </div>
+
+    <PaymentModal
+      v-if="form.hasPayment"
+      ref="paymentModal"
+      :paymentInfo="paymentInfo"
+      @aborted="paymentAborted"
+    />
   </form>
 </template>
 
@@ -28,13 +35,15 @@
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 import FormElement from '@/components/form/FormElement'
 import Terms from '@/components/form/_elements/Terms'
+import PaymentModal from '@/components/modals/Payment/index'
 import serialize from 'form-serialize'
 
 export default {
   name: 'FormBuilder',
   components: {
     FormElement,
-    Terms
+    Terms,
+    PaymentModal
   },
   props: {
     id: {
@@ -44,11 +53,46 @@ export default {
   },
   computed: {
     ...mapGetters({
-      get_form_by_id: 'forms/GET_FORM_BY_ID'
+      get_form_by_id: 'forms/GET_FORM_BY_ID',
+      getModal: 'modals/GET_MODAL_BY_NAME_AND_TYPE'
     }),
 
     form() {
       return this.get_form_by_id(this.id)
+    },
+
+    formStatus() {
+      return this.get_form_by_id(this.id).status
+    },
+
+    paymentInfo() {
+      if (this.formStatus.waitingForPayment) {
+        this.$refs.paymentModal.formatPaymentMethods()
+        return this.form.payment
+      } else {
+        return {
+          formId: this.form.id,
+          postId: null,
+          paymentId: null,
+          methods: []
+        }
+      }
+    },
+
+    paymentModal() {
+      return this.getModal('payment-methods-modal', 'payment')
+    }
+  },
+  watch: {
+    form: {
+      handler: function(formChange) {
+        if (formChange.payment !== undefined) {
+          if (formChange.payment.status === 'initiated') {
+            // TODO: ping payment has started
+          }
+        }
+      },
+      deep: true
     }
   },
   async mounted() {
@@ -59,30 +103,57 @@ export default {
   },
   methods: {
     ...mapMutations({
-      add_form: 'forms/ADD_FORM'
+      add_form: 'forms/ADD_FORM',
+      showModal: 'modals/SET_SHOW_MODAL'
     }),
     ...mapActions({
-      set_error: 'forms/do_set_form_element_error'
+      set_form_status: 'forms/do_set_form_status',
+      set_error: 'forms/do_set_form_element_error',
+      initPay: 'forms/do_initiate_payment'
     }),
 
     async submit() {
       this.$refs.form.classList.add('was-validated')
-      // TODO: select method to pay with on response
-      const { status, data } = await this.$axios.post(
-        `/post/form/${this.id}`,
-        serialize(this.$refs.form)
-      )
 
-      if (status === 201) {
-        // TODO: check if form has payment to complete form
-        if (this.form.hasPayment) {
-          console.log(data)
+      if (!this.form.status.error) {
+        const { status, data } = await this.$axios.post(
+          `/post/form/${this.id}`,
+          serialize(this.$refs.form)
+        )
+
+        if (status === 201) {
+          if (this.form.hasPayment) {
+            this.initPay({
+              formId: data.formId,
+              postId: data.postId,
+              paymentId: data.paymentId,
+              methods: data.methods
+            })
+
+            this.set_form_status({
+              formId: this.form.id,
+              status: 'waitingForPayment',
+              toggle: true
+            })
+
+            this.showModal(this.paymentModal.id)
+          }
+        } else if (status === 203) {
+          Object.keys(data).map(fieldName => {
+            this.set_error({
+              formId: this.form.id,
+              fieldName,
+              errorMessage: data[fieldName][0]
+            })
+          })
         }
-      } else if (status === 203) {
-        Object.keys(data).map(fieldName => {
-          this.set_error({ formId: this.form.id, fieldName })
-        })
       }
+    },
+
+    paymentAborted() {
+      // TODO: DISABLE FORM
+      // TODO: MAKE RETRY METHOD
+      alert('catched abort')
     }
   }
 }

@@ -3,6 +3,16 @@
     <NavBar id="navbar" class-prop="bg-nonomes-blue position-relative" />
     <mdb-container fluid>
       <PageSection id="sponsors-section">
+        <mdb-row center class="mt-5 mt-md-0">
+          <mdb-col md="6" class="p-3">
+            <article>
+              <h2 class="text-black">
+                Bedrijven
+              </h2>
+              <div v-html="introText.content" />
+            </article>
+          </mdb-col>
+        </mdb-row>
         <mdb-row class="p-5">
           <mdb-col
             v-for="sponsor in sponsors"
@@ -49,9 +59,36 @@ export default {
     mdbView,
     mdbMask
   },
+  head() {
+    return {
+      title: 'Sponsors',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Studentenvereniging NoNoMes kan op veel verschillende manieren iets voor uw bedrijf betekenen: van adverteren op onze website tot deelname aan een bedrijvendiner. Er zijn erg veel mogelijkheden!\nNoNoMes telt rond de 300 actieve leden en heeft een groot reünistenbestand.'
+        }
+      ]
+    }
+  },
   data() {
     return {
       animationDelay: 400,
+      introText: {
+        type: 'html',
+        content: `<p>Studentenvereniging NoNoMes kan op veel verschillende manieren iets voor uw bedrijf betekenen: van adverteren op onze website tot deelname aan een bedrijvendiner. Er zijn erg veel mogelijkheden!
+NoNoMes telt rond de 300 actieve leden en heeft een groot reünistenbestand.<br><br>
+Al deze diverse leden zorgen voor een leuke mix van verschillende persoonlijkheden, interesses, hobby’s en studies. Echter kunnen onze leden elkaar juist ook vinden in gemeenschappelijke kenmerken, zoals een opleiding, motivatie voor het maken van carrière, een groot sociaal netwerk en ontwikkelingen op organisatorisch vlak door bestuurlijke activiteiten binnen de vereniging te bekleden. <br><br> Onze studenten zijn gedreven en goed voorbereid op de maatschappij. Hierdoor vormen zij een interessante doelgroep voor bedrijven. <br> <br>
+Mocht u interesse hebben in een samenwerking met onze studentenvereniging of meer over de diverse mogelijkheden te weten wil komen, kunt u hier onze sponsorbrochure downloaden of u kunt contact opnemen met onze Quaestor, Mila Kroon, via onderstaande contactgegevens:<p>
+<p>PR NoNoMes</p>
+<p>Warmoesstraat 119-1</p>
+<p>1012JA Amsterdam</p>
+<p>T: 020 – 627 30 67</p>
+<p>M: 06 – 15592086</p>
+<p>E: extern@nonomes.nl</p>
+`
+      },
       sponsors: [
         {
           id: 1,

@@ -6,6 +6,7 @@
     </p>
     <mdb-input
       :id="`${element.name}-${element.id}-man`"
+      ref="radioMen"
       :name="element.name"
       type="radio"
       icon="mars"
@@ -14,9 +15,10 @@
       labelClass="icon-freeze"
       value="1"
       required
+      @change="validate('man')"
     />
     <mdb-input
-      :id="`${element.name}-${element.name}-women`"
+      :id="`${element.name}-${element.id}-women`"
       ref="radioWomen"
       :name="element.name"
       type="radio"
@@ -25,12 +27,14 @@
       label="Dame"
       value="0"
       required
-      :invalidFeedback="element.error"
+      :invalidFeedback="error"
+      @change="validate('women')"
     />
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import { mdbInput, mdbIcon } from 'mdbvue'
 export default {
   name: 'Gender',
@@ -97,14 +101,85 @@ export default {
       }
     }
   },
-  mounted() {
-    for (const index in this.$refs.radioWomen.$el.children) {
-      const child = this.$refs.radioWomen.$el.children[index]
+  computed: {
+    ...mapGetters({
+      getForm: 'forms/GET_FORM_BY_ID',
+      getElement: 'forms/GET_FORM_ELEMENT_BY_ID',
+      getFormErrors: 'forms/GET_FORM_ERRORS'
+    }),
 
-      if (child instanceof HTMLInputElement) {
-        child.removeAttribute('checked')
-      }
+    form() {
+      return this.getForm(this.element.form_id)
+    },
+
+    error() {
+      const error = this.form.errors.find(
+        error => error.name === this.element.name
+      )
+      return error === undefined ? this.element.error : error.message
+    },
+
+    inputMan() {
+      return this.input(this.$refs.radioMan)
+    },
+
+    inputWomen() {
+      return this.input(this.$refs.radioWomen)
     }
+  },
+  mounted() {
+    const params = {
+      formId: this.form.id,
+      fieldName: this.element.name,
+      errorMessage: this.element.error
+    }
+
+    this.set_error(params)
+
+    if (this.inputWomen !== null) {
+      this.inputWomen.removeAttribute('checked')
+    }
+  },
+  methods: {
+    input(ref) {
+      for (const index in ref.$el.children) {
+        const child = ref.$el.children[index]
+
+        if (child instanceof HTMLInputElement) {
+          return child
+        }
+      }
+      return null
+    },
+
+    validate(selection) {
+      const params = {
+        formId: this.form.id,
+        fieldName: this.element.name
+      }
+
+      this.remove_error(params)
+
+      if (selection === 'man') {
+        this.update({
+          formId: this.element.form_id,
+          elementId: this.element.id,
+          value: 1
+        })
+      } else {
+        this.update({
+          formId: this.element.form_id,
+          elementId: this.element.id,
+          value: 0
+        })
+      }
+    },
+
+    ...mapActions({
+      update: 'forms/do_update_form_element_value',
+      set_error: 'forms/do_set_form_element_error',
+      remove_error: 'forms/do_remove_form_element_error'
+    })
   }
 }
 </script>

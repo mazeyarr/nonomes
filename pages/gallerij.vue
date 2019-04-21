@@ -22,6 +22,18 @@ import { mdbContainer } from 'mdbvue'
 
 export default {
   name: 'Gallerij',
+  head() {
+    return {
+      title: 'Gallerij',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `De leukste studententijd vind je bij NoNoMes, bekijk de leukste foto's!`
+        }
+      ]
+    }
+  },
   components: { PageSection, NavBar, mdbContainer, Gallery, Contact },
   mounted() {
     this.reAnimateObjects('intro-contact')

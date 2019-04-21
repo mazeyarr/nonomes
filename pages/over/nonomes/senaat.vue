@@ -167,6 +167,18 @@ export default {
     mdbCardBody,
     mdbIcon
   },
+  head() {
+    return {
+      title: `Senaat`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Senaat Torenburg, is het huidige senaat.`
+        }
+      ]
+    }
+  },
   data() {
     return {
       imgs: ['http://nonomes.nl/media/1156/senaat.png?width=500&height=354'],

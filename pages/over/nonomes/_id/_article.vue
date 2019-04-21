@@ -32,6 +32,18 @@ export default {
     mdbCol,
     ArticleContent
   },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.subject}`
+        }
+      ]
+    }
+  },
   validate({ params }) {
     return /^\d+$/.test(params.id)
   },

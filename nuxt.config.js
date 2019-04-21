@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    titleTemplate: '%s - S.V.A.A. NoNoMes',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -69,7 +69,10 @@ module.exports = {
   plugins: [
     '~/plugins/intersection-observer.js',
     '~/plugins/vue-waypoint.js',
-    '~/plugins/vue-html-sanitizer.js'
+    '~/plugins/vue-html-sanitizer.js',
+    '~/plugins/vue-html-to-paper.js',
+    '~/plugins/axios.js',
+    { src: '~/plugins/hotjar.js', ssr: false }
   ],
 
   /*
@@ -80,14 +83,20 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-96990724-5'
+      }
+    ]
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://otter.localhost/api/'
+    baseURL: 'http://le-crocodile.localhost/api/'
   },
 
   /*

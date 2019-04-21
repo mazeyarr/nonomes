@@ -10,7 +10,7 @@
     :customValidation="startValidate"
     :isValid="isValid"
     :validFeedback="element.success"
-    :invalidFeedback="element.error"
+    :invalidFeedback="error"
     @change="startValidate = true"
   />
 </template>
@@ -19,8 +19,6 @@
 import { mapGetters, mapActions } from 'vuex'
 import { mdbInput } from 'mdbvue'
 export default {
-  // TODO: put and update error field in form
-  // TODO: isValid = check if name is in error array of form
   name: 'Input',
   components: {
     mdbInput
@@ -80,11 +78,26 @@ export default {
     ...mapGetters({
       getForm: 'forms/GET_FORM_BY_ID',
       getElement: 'forms/GET_FORM_ELEMENT_BY_ID',
-      getFormErrors: 'forms/GET_FORM_ERRORS'
+      getFormErrors: 'forms/GET_FORM_ERRORS',
+      getIsValid: 'forms/GET_IS_FORM_ELEMENT_VALID'
     }),
 
     form() {
       return this.getForm(this.element.form_id)
+    },
+
+    error() {
+      const error = this.form.errors.find(
+        error => error.name === this.element.name
+      )
+
+      return error === undefined ? this.element.error : error.message
+    },
+
+    isValid() {
+      const formId = this.form.id
+      const fieldName = this.element.name
+      return this.getIsValid({ formId, fieldName })
     },
 
     value: {
@@ -92,64 +105,59 @@ export default {
         return this.getElement(this.element.form_id, this.element.id).val
       },
       set(value) {
-        const params = {
-          formId: this.form.id,
-          fieldName: this.element.name
-        }
+        if (this.element.validate) {
+          const params = {
+            formId: this.form.id,
+            fieldName: this.element.name,
+            errorMessage: this.element.error
+          }
 
-        switch (this.element.type) {
-          case 'tel':
-            console.log(2)
-            // eslint-disable-next-line no-useless-escape
-            const reTel = /^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/
-
-            if (reTel.test(String(value))) {
-              this.remove_error(params)
-            } else {
-              this.set_error(params)
-            }
-            break
-
-          case 'email':
-            console.log(3)
-            // eslint-disable-next-line no-useless-escape
-            const reMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-            if (reMail.test(String(value).toLocaleLowerCase())) {
-              this.remove_error(params)
-            } else {
-              this.set_error(params)
-            }
-            break
-
-          case 'text':
-          default:
-            if (value === '') {
-              this.set_error(params)
-            } else if (this.element.name.includes('zipcode')) {
-              const reZip = /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i
-
-              if (reZip.test(String(value).toLocaleLowerCase())) {
+          switch (this.element.type) {
+            case 'tel':
+              // eslint-disable-next-line no-useless-escape
+              const reTel = /^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/
+              if (reTel.test(String(value))) {
                 this.remove_error(params)
               } else {
                 this.set_error(params)
               }
-            } else {
-              this.remove_error(params)
-            }
-            break
-        }
+              break
 
+            case 'email':
+              // eslint-disable-next-line no-useless-escape
+              const reMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+              if (reMail.test(String(value).toLocaleLowerCase())) {
+                this.remove_error(params)
+              } else {
+                this.set_error(params)
+              }
+              break
+
+            case 'text':
+            default:
+              if (value === '') {
+                this.set_error(params)
+              } else if (this.element.name.includes('zipcode')) {
+                const reZip = /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i
+
+                if (reZip.test(String(value).toLocaleLowerCase())) {
+                  this.remove_error(params)
+                } else {
+                  this.set_error(params)
+                }
+              } else {
+                this.remove_error(params)
+              }
+              break
+          }
+        }
         this.update({
           formId: this.element.form_id,
           elementId: this.element.id,
           value: value
         })
       }
-    },
-
-    isValid() {
-      return this.getFormErrors(this.form.id).indexOf(this.element.name) === -1
     }
   },
   methods: {

@@ -48,6 +48,17 @@ import { mdbBtn, mdbIcon } from 'mdbvue'
 
 export default {
   name: 'ArticleContent',
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.article.text}`
+        }
+      ]
+    }
+  },
   components: {
     mdbBtn,
     mdbIcon
