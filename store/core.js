@@ -1,6 +1,6 @@
 export const state = () => ({
-  apiBaseUrl: 'http://le-crocodile.localhost/api',
-  publicBaseUrl: 'http://le-crocodile.localhost',
+  apiBaseUrl: 'http://le-crocodile.nl/api',
+  publicBaseUrl: 'http://le-crocodile.nl',
   loading: true,
   storeInitExecuted: false,
   smallDeviceWidthLimit: 1050,

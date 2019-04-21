@@ -96,7 +96,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://le-crocodile.localhost/api/'
+    baseURL: 'http://le-crocodile.nl/api/'
   },
 
   /*
