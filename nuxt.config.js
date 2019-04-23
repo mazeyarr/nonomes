@@ -108,6 +108,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    https: true,
     baseURL:
       process.env.APP_ENV !== 'local'
         ? process.env.PROD_API
