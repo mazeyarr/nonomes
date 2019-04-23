@@ -7,7 +7,8 @@
 
     <ConfirmModal
       :title="modalTitle"
-      :show="status.failed || status.aborted"
+      :description="modalDescription"
+      :show="!status.paid"
       :success="paymentRetryModal.success"
       :warning="paymentRetryModal.warning"
       :danger="paymentRetryModal.danger"
@@ -20,8 +21,8 @@
         v-if="paymentRetryModal.show"
         :order-uuid="uuid"
         :paymentMethods="paymentRetryModal.paymentMethods"
-        @aborted="status.failed = true"
-        @failed="status.failed = true"
+        @aborted="paymentAborted"
+        @failed="paymentAborted"
       />
     </ConfirmModal>
   </main>
@@ -96,6 +97,14 @@ export default {
       }
     },
 
+    modalDescription() {
+      if (this.timePassed) {
+        return 'Rond je betaling af 💸'
+      } else {
+        return 'Er is iets misgegaan, wil je het nog een keer proberen?'
+      }
+    },
+
     order() {
       return this.$data
     }
@@ -109,8 +118,7 @@ export default {
     return data
   },
   mounted() {
-    alert(1)
-    if (this.status.failed || this.status.aborted) {
+    if (!this.status.paid) {
       if (this.timePassed) {
         this.paymentRetryModal.warning = true
       } else {
@@ -130,21 +138,31 @@ export default {
         this.paymentRetryModal.paymentMethods.push(method)
       )
 
-      this.status.failed = false
+      this.setWaitingForPaymentActive()
       this.paymentRetryModal.show = true
     },
+
     errorAbort() {
       this.$router.push('/')
+    },
+
+    setWaitingForPaymentActive() {
+      this.status.failed = false
+      this.status.aborted = false
+      this.status.expired = false
+      this.status.waitingForPayment = true
+    },
+
+    paymentAborted() {
+      this.status.failed = false
+      this.status.aborted = true
+      this.status.expired = false
+      this.status.waitingForPayment = false
+      this.paymentRetryModal.show = false
     }
   }
 }
 </script>
 
 <style>
-p {
-  line-height: 1rem;
-}
-.invoice-logo {
-  height: 150px !important;
-}
 </style>

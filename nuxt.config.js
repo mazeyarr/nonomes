@@ -1,8 +1,15 @@
-const pkg = require('./package')
+require('dotenv').config()
 
 module.exports = {
   mode: 'spa',
 
+  env: {
+    env: process.env.APP_ENV,
+    baseUrl:
+      process.env.APP_ENV !== 'local'
+        ? process.env.PROD_API
+        : process.env.DEV_API
+  },
   /*
   ** Headers of the page
   */
@@ -11,7 +18,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `S.V.A.A. Nomen Non Magnum est (NoNoMes) is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam. Jaarlijks organiseert NoNoMes de leukste activiteiten! Denk aan de wekelijkse borrel op dinsdag, gala’s op de meest luxe locaties en onze jaarlijkse feestweek de Warmoesweek. NoNoMes heeft vijf dames- en vier herendisputen waarmee je samen eet, borrelt, studeert en misschien wel woont in Amsterdam. Met een lidmaatschap bij NoNoMes haal je alles uit je studentenleven!`
+      },
       { name: 'msapplication-TileColor', content: '#603cba' },
       { name: 'theme-color', content: '#ffffff' }
     ],
@@ -79,6 +90,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
@@ -96,7 +108,10 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://le-crocodile.nl/api/'
+    baseURL:
+      process.env.APP_ENV !== 'local'
+        ? process.env.PROD_API
+        : process.env.DEV_API
   },
 
   /*

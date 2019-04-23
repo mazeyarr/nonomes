@@ -8,13 +8,17 @@
     :danger="danger"
     @close="confirm = false"
   >
-    <slot></slot>
+    <slot />
     <mdb-modal-header center :close="false">
       <p class="heading">
         {{ title }}
       </p>
     </mdb-modal-header>
     <mdb-modal-body>
+      <p v-if="description !== ''">
+        {{ description }}
+      </p>
+
       <mdb-icon v-if="success" icon="thumbs-up" size="4x" class="animated rotateIn" />
       <mdb-icon v-if="warning" icon="exclamation-circle" size="4x" class="animated rotateIn" />
       <mdb-icon v-if="danger" icon="times" size="4x" class="animated rotateIn" />
@@ -54,6 +58,11 @@ export default {
       type: String,
       required: false,
       default: 'Weet je zeker dat je niet door wilt?'
+    },
+    description: {
+      type: String,
+      required: false,
+      default: ''
     },
     success: {
       type: Boolean,

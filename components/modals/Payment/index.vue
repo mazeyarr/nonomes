@@ -196,9 +196,7 @@ export default {
     },
 
     async pay() {
-      const url = `${this.getBaseUrl}/order/make/payment/${
-        this.paymentInfo.paymentId
-      }`
+      const url = `/order/make/payment/${this.paymentInfo.paymentId}`
       const { status, data } = await this.$axios.post(url, {
         postId: this.paymentInfo.postId,
         paymentId: this.paymentInfo.paymentId,
@@ -207,6 +205,8 @@ export default {
 
       if (status === 200) {
         window.location.href = data
+      } else {
+        console.log('fout...')
       }
     },
 

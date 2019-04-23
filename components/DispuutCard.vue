@@ -10,7 +10,7 @@
       <mdb-card-text class="mb-5">
         {{ description }}
       </mdb-card-text>
-      <mdb-btn color="unique" class="read-more">
+      <mdb-btn color="unique" class="read-more" @click="readMore">
         <mdb-icon icon="book" />
         Lees meer
       </mdb-btn>
@@ -58,6 +58,16 @@ export default {
       type: String,
       required: true,
       default: '/images/nonomes_wapen.png'
+    },
+    url: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    // TODO: PING SERVER FOR STAT
+    readMore() {
+      window.open(this.url, '_blank')
     }
   }
 }

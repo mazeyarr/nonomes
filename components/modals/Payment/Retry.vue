@@ -1,29 +1,24 @@
 <template>
-  <form
-    novalidate
-    @submit.prevent
-  >
-    <mdb-modal @close="close">
-      <mdb-modal-header>
-        <mdb-modal-title>Betaal formulier</mdb-modal-title>
-      </mdb-modal-header>
-      <mdb-modal-body>
-        <p class="text-center py-2">
-          Kies hieronder een betaalmethode
-        </p>
+  <mdb-modal @close="close">
+    <mdb-modal-header>
+      <mdb-modal-title>Betaal formulier</mdb-modal-title>
+    </mdb-modal-header>
+    <mdb-modal-body>
+      <p class="text-center py-2">
+        Kies hieronder een betaalmethode
+      </p>
 
-        <mdb-select v-model="paymentMethods" name="payment-method" color="success" required @getValue="selectPaymentMethod" />
-      </mdb-modal-body>
-      <mdb-modal-footer>
-        <mdb-btn color="danger" icon="times" @click="close">
-          Sluiten
-        </mdb-btn>
-        <mdb-btn color="success" icon="coins" iconRight @click="pay">
-          Betalen
-        </mdb-btn>
-      </mdb-modal-footer>
-    </mdb-modal>
-  </form>
+      <mdb-select v-model="paymentMethods" name="payment-method" color="success" required @getValue="selectPaymentMethod" />
+    </mdb-modal-body>
+    <mdb-modal-footer>
+      <mdb-btn color="danger" icon="times" @click="close">
+        Sluiten
+      </mdb-btn>
+      <mdb-btn color="success" icon="coins" iconRight @click="pay">
+        Betalen
+      </mdb-btn>
+    </mdb-modal-footer>
+  </mdb-modal>
 </template>
 
 <script>
@@ -71,15 +66,13 @@ export default {
       get_form_by_id: 'forms/GET_FORM_BY_ID'
     })
   },
-
   methods: {
     selectPaymentMethod(value) {
       this.selectedPaymentMethod = value
     },
     async pay() {
-      console.log(this.selectedPaymentMethod)
       if (this.selectedPaymentMethod !== null) {
-        const url = `${this.getBaseUrl}/order/retry/payment/${this.orderUuid}`
+        const url = `/order/retry/payment/${this.orderUuid}`
         const { status, data } = await this.$axios.post(url, {
           paymentMethod: this.selectedPaymentMethod
         })

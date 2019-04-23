@@ -65,14 +65,14 @@
             <mdb-row>
               <mdb-col>
                 <h2 class="text-black text-center">
-                  Senaat Torenburg
+                  Senaat Toorenburg
                 </h2>
               </mdb-col>
             </mdb-row>
             <mdb-row class="mdb-lightbox pt-5">
               <mdb-col @click.native="show(0)">
                 <figure>
-                  <img src="http://nonomes.nl/media/1156/senaat.png?width=500&height=354" class="img-fluid" alt="">
+                  <img src="/images/nonomes-senaat.jpeg" class="img-fluid" alt="">
                 </figure>
               </mdb-col>
             </mdb-row>
@@ -174,14 +174,14 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: `Senaat Torenburg, is het huidige senaat.`
+          content: `Senaat Toorenburg, is het huidige senaat.`
         }
       ]
     }
   },
   data() {
     return {
-      imgs: ['http://nonomes.nl/media/1156/senaat.png?width=500&height=354'],
+      imgs: ['/images/nonomes-senaat.jpeg'],
       visible: false,
       index: 0
     }

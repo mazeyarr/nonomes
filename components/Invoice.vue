@@ -295,5 +295,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+p {
+  line-height: 1rem;
+}
+.invoice-logo {
+  height: 150px !important;
+}
 </style>

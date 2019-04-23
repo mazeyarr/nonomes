@@ -49,7 +49,7 @@
               </nuxt-link>
 
               <nuxt-link class="dropdown-item" to="/over/nonomes/1/reunisten">
-                Reunistschap
+                Reünistschap
               </nuxt-link>
 
               <!--<nuxt-link class="dropdown-item" to="/over/nonomes/2/maatschappelijk">-->

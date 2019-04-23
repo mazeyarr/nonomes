@@ -92,33 +92,30 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
       sponsors: [
         {
           id: 1,
-          name: 'Bavaria',
-          imgSrc: 'http://nonomes.nl/media/1152/bankr-logo.png',
-          alt: 'Sample',
+          name: 'Bankr',
+          imgSrc: '/images/sponsors/sponsor-1.png',
+          alt: 'Bankr',
           show: false
         },
         {
           id: 2,
-          name: 'Bavaria',
-          imgSrc:
-            'http://nonomes.nl/media/1022/studeersnel.png?width=270&height=52',
-          alt: 'Sample',
+          name: 'Studeersnel',
+          imgSrc: '/images/sponsors/sponsor-2.png',
+          alt: 'Studeersnel',
           show: false
         },
         {
           id: 3,
-          name: 'Bavaria',
-          imgSrc:
-            'http://nonomes.nl/media/1058/easyswitch.png?width=225&height=95',
-          alt: 'Sample',
+          name: 'EasySwitch',
+          imgSrc: '/images/sponsors/sponsor-3.png',
+          alt: 'EasySwitch',
           show: false
         },
         {
           id: 4,
-          name: 'Bavaria',
-          imgSrc:
-            'http://nonomes.nl/media/1059/overstappen-logo.png?width=177&height=99',
-          alt: 'Sample',
+          name: 'Overstappen',
+          imgSrc: '/images/sponsors/sponsor-4.png',
+          alt: 'Overstappen',
           show: false
         }
       ]
