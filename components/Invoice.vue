@@ -287,6 +287,18 @@ export default {
       }
     }
   },
+  mounted() {
+    if (this.order.status.paid) {
+      this.$ga.ecommerce.addItem({
+        id: this.order.uuid,
+        name: this.order.name,
+        sku: this.order.uuid,
+        category: this.order.name,
+        price: this.order.amount,
+        quantity: '1'
+      })
+    }
+  },
   methods: {
     print() {
       this.$htmlToPaper(`order-invoice-${this.order.uuid}`)

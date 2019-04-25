@@ -118,6 +118,7 @@ module.exports = {
     '~/plugins/vue-waypoint.js',
     '~/plugins/vue-html-sanitizer.js',
     '~/plugins/vue-html-to-paper.js',
+    '~/plugins/vue-facebook-pixel.js',
     '~/plugins/axios.js',
     { src: '~/plugins/hotjar.js', ssr: false }
   ],
@@ -137,7 +138,10 @@ module.exports = {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'UA-96990724-5'
+        id: 'UA-96990724-5',
+        ecommerce: {
+          enabled: true
+        }
       }
     ]
   ],
