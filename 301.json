@@ -2,6 +2,7 @@
   { "from": "/vereniging/disputen/", "to": "/over/nonomes/disputen" },
   { "from": "/reunisten/", "to": "/over/nonomes/1/reunisten" },
   { "from": "/inschrijfbevestiging-nonomes/", "to": "/" },
-  { "from": "/word-lid/q-a/", "to": "over/nonomes/4/Q&A" },
-  { "from": "/vereniging", "to": "/over/" }
+  { "from": "/word-lid/q-a/", "to": "/over/nonomes/4/Q&A" },
+  { "from": "/vereniging", "to": "/over" },
+  { "from": "/vereniging/", "to": "/over" },
 ]
