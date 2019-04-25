@@ -1,7 +1,7 @@
 <template>
   <div>
     <mdb-carousel
-      :interval="100000"
+      :interval="8000"
       showControls
       showIndicators
       multi

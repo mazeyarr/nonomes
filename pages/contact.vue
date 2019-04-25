@@ -26,6 +26,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: `T: 020 – 627 30 67 - M: 06 – 15592086 - E: extern@nonomes.nl - PR NoNoMes Warmoesstraat 119-1, 1012JA Amsterdam`
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: `contact, emailadres, telefoonnummer, locatie nonomes, nonomes contact, studentenvereniging contact`
         }
       ]
     }

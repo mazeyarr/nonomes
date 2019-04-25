@@ -150,9 +150,29 @@ export default {
       title: 'Home',
       meta: [
         {
+          hid: 'og:title',
+          name: 'S.V.A.A. NoNoMes - Home',
+          content: `S.V.A.A. NoNoMes is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam, Jaarlijks organiseert NoNoMes de leukste activiteiten!`
+        },
+        {
           hid: 'description',
           name: 'description',
-          content: `S.V.A.A. Nomen Non Magnum est (NoNoMes) is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam. Jaarlijks organiseert NoNoMes de leukste activiteiten! <br><br>Denk aan de wekelijkse borrel op dinsdag, gala’s op de meest luxe locaties en onze jaarlijkse feestweek de Warmoesweek. NoNoMes heeft vijf dames- en vier herendisputen waarmee je samen eet, borrelt, studeert en misschien wel woont in Amsterdam. Met een lidmaatschap bij NoNoMes haal je alles uit je studentenleven!`
+          content: `S.V.A.A. NoNoMes is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam, Jaarlijks organiseert NoNoMes de leukste activiteiten!`
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: `studentenvereniging amsterdam, nonomes, uit in amsterdam vandaag, lidmaatschap, nonomes amsterdam, studentenvereniging engels, studie, kamers amsterdam, hockeyvereniging, hockey amsterdam`
+        },
+        {
+          hid: 'subject',
+          name: 'subject',
+          content: `Studentenvereniging Amsterdam`
+        },
+        {
+          hid: 'copyright',
+          name: 'copyright',
+          content: `Mazeyar Rezaei`
         }
       ]
     }

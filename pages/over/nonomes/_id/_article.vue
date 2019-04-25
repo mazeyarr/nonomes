@@ -40,6 +40,16 @@ export default {
           hid: 'description',
           name: 'description',
           content: `${this.subject}`
+        },
+        {
+          hid: 'subject',
+          name: 'subject',
+          content: `${this.subject}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.subject}`
         }
       ]
     }

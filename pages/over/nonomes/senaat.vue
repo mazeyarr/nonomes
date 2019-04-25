@@ -175,6 +175,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: `Senaat Toorenburg, is het huidige senaat.`
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: `studentenvereniging amsterdam, lid worden, senaat, nonomes, stichting, organisatie, contact, praeses, questor, ab actis, penningmeester`
         }
       ]
     }

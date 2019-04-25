@@ -30,6 +30,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: `De leukste studententijd vind je bij NoNoMes, bekijk de leukste foto's!`
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: `studenten foto's, nonomes foto's, feesten amsterdam, student reizen, studentenvereniging amsterdam`
         }
       ]
     }

@@ -113,6 +113,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: `NoNoMes heeft een disputen cultuur. Dit betekent dat de meeste leden aangesloten zijn bij een van de negen disputen van NoNoMes. Er zijn vier heren- en vijf damesdisputen met ieder haar eigen karakter. Lees hier over alle disputen.`
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: `disputen, disputen amsterdam, studenten, studeren, kamer amsterdam, nonomes, studentenvereiniging`
         }
       ]
     }

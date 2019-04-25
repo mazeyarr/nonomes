@@ -68,6 +68,11 @@ export default {
           name: 'description',
           content:
             'Studentenvereniging NoNoMes kan op veel verschillende manieren iets voor uw bedrijf betekenen: van adverteren op onze website tot deelname aan een bedrijvendiner. Er zijn erg veel mogelijkheden!\nNoNoMes telt rond de 300 actieve leden en heeft een groot reünistenbestand.'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: `overstappen.nl, bankr, sponsors, studeren, studeersnel.nl, sponsors nonomes, sponsor worden`
         }
       ]
     }

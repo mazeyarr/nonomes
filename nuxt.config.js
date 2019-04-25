@@ -1,14 +1,17 @@
 require('dotenv').config()
+const axios = require('axios')
+const API_URL =
+  process.env.APP_ENV !== 'local' ? process.env.PROD_API : process.env.DEV_API
+
+const SITE_URL =
+  process.env.APP_ENV !== 'local' ? process.env.PROD_URL : process.env.DEV_URL
 
 module.exports = {
   mode: 'spa',
 
   env: {
     env: process.env.APP_ENV,
-    baseUrl:
-      process.env.APP_ENV !== 'local'
-        ? process.env.PROD_API
-        : process.env.DEV_API
+    baseUrl: API_URL
   },
   /*
   ** Headers of the page
@@ -21,8 +24,41 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: `S.V.A.A. Nomen Non Magnum est (NoNoMes) is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam. Jaarlijks organiseert NoNoMes de leukste activiteiten! Denk aan de wekelijkse borrel op dinsdag, gala’s op de meest luxe locaties en onze jaarlijkse feestweek de Warmoesweek. NoNoMes heeft vijf dames- en vier herendisputen waarmee je samen eet, borrelt, studeert en misschien wel woont in Amsterdam. Met een lidmaatschap bij NoNoMes haal je alles uit je studentenleven!`
+        content: `S.V.A.A. NoNoMes is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam, Jaarlijks organiseert NoNoMes de leukste activiteiten!`
       },
+      { name: 'og:title', content: 'S.V.A.A. NoNoMes' },
+      { name: 'og:site_name', content: 'S.V.A.A. NoNoMes' },
+      { name: 'fb:page_id', content: '325649944119553' },
+      { name: 'og:email', content: 'info@nonomes.nl' },
+      { name: 'og:phone_number', content: '020-6273067' },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: `S.V.A.A. NoNoMes is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam, Jaarlijks organiseert NoNoMes de leukste activiteiten!`
+      },
+      { name: 'og:locale', content: 'nl_NL' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:image', content: 'https://nonomes.nl/_nuxt/img/6d9cfcc.png' },
+      {
+        name: 'og:url',
+        content: SITE_URL
+      },
+      { name: 'robots', content: 'index, follow' },
+      { httpEquiv: 'Content-Type', content: 'text/html; charset=utf-8' },
+      { httpEquiv: 'language', content: 'NL' },
+      { name: 'language', content: 'Nederland' },
+      { name: 'revisit-after', content: '7 days' },
+      {
+        name: 'url',
+        content: SITE_URL
+      },
+      {
+        name: 'identifier-URL',
+        content: SITE_URL
+      },
+      { name: 'owner', content: 'Mazeyar Rezaei' },
+      { name: 'author', content: 'Mazeyar Rezaei' },
+      { name: 'reply-to', content: 'mazeyar.rezaei@gmail.com' },
       { name: 'msapplication-TileColor', content: '#603cba' },
       { name: 'theme-color', content: '#ffffff' }
     ],
@@ -66,7 +102,7 @@ module.exports = {
   loading: '~/components/Loader.vue',
 
   router: {
-    middleware: ['load-store', 'active-page']
+    middleware: ['load-store', 'active-page', 'seo-redirect']
   },
 
   /*
@@ -96,6 +132,8 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
     [
       '@nuxtjs/google-analytics',
       {
@@ -103,12 +141,39 @@ module.exports = {
       }
     ]
   ],
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/order'
+  },
+
+  sitemap: {
+    hostname: SITE_URL,
+    gzip: true,
+    exclude: ['/order'],
+    routes() {
+      return axios
+        .get(`${API_URL}articles`)
+        .then(resp =>
+          resp.data.map(article => {
+            return {
+              title: article.title,
+              url: `/over/nonomes/${article.id}/${article.title}`,
+              changefreq: 'monthly',
+              lastmod: `${article.updated_at}`
+            }
+          })
+        )
+        .catch(() => [])
+    }
+  },
+
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    https: true,
+    https: process.env.APP_ENV !== 'local',
     baseURL:
       process.env.APP_ENV !== 'local'
         ? process.env.PROD_API
