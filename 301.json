@@ -4,5 +4,5 @@
   { "from": "/inschrijfbevestiging-nonomes/", "to": "/" },
   { "from": "/word-lid/q-a/", "to": "/over/nonomes/4/Q&A" },
   { "from": "/vereniging", "to": "/over" },
-  { "from": "/vereniging/", "to": "/over" },
+  { "from": "/vereniging/", "to": "/over" }
 ]
