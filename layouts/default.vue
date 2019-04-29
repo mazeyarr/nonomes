@@ -13,6 +13,9 @@ export default {
   components: {
     StandardModal,
     FloatingMenu
+  },
+  mounted() {
+    this.$ga.require('displayfeatures')
   }
 }
 </script>
