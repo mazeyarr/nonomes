@@ -83,12 +83,19 @@
             Q&A
           </mdb-nav-item>
 
+          <!--          <mdb-nav-item-->
+          <!--            anchor-class="white-text"-->
+          <!--            to="/over/nonomes/disputen"-->
+          <!--            :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"-->
+          <!--          >-->
+          <!--            Disputen-->
+          <!--          </mdb-nav-item>-->
+
           <mdb-nav-item
             anchor-class="white-text"
-            to="/over/nonomes/disputen"
-            :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"
+            @click="goToGoogleForm"
           >
-            Disputen
+            Slapen bij NoNoMes
           </mdb-nav-item>
 
           <mdb-nav-item
@@ -182,6 +189,10 @@ export default {
     handleResize() {
       this.window.width = window.innerWidth
       this.window.height = window.innerHeight
+    },
+
+    goToGoogleForm() {
+      window.open('https://forms.gle/25LvgKpcE7Pc5Je48', '_blank')
     }
   }
 }
