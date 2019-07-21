@@ -96,7 +96,8 @@
 
         <mdb-nav-item
           anchor-class="white-text"
-          @click="goToGoogleForm"
+          href="https://forms.gle/25LvgKpcE7Pc5Je48"
+          target="_blank"
         >
           Slapen bij NoNoMes
         </mdb-nav-item>
@@ -171,10 +172,6 @@ export default {
     },
     activeRoute(checkPath) {
       return this.$route.path === checkPath ? 'active' : ''
-    },
-
-    goToGoogleForm() {
-      window.open('https://forms.gle/25LvgKpcE7Pc5Je48', '_blank')
     }
   }
 }
