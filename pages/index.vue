@@ -106,6 +106,12 @@
           </transition>
         </page-section>
       </intersect>
+
+      <page-section
+        id="intro-sponsors"
+      >
+        <SponsorsComponent />
+      </page-section>
     </mdb-container>
   </div>
 </template>
@@ -118,6 +124,7 @@ import PageSection from '@/components/PageSection.vue'
 import SectionContent from '@/components/SectionContent.vue'
 import Intersect from 'vue-intersect'
 import GuestModalTrigger from '@/components/modals/Standard/Trigger.vue'
+import SponsorsComponent from '@/components/Sponsors.vue'
 
 import { mdbContainer, mdbRow, mdbCol } from 'mdbvue'
 
@@ -131,7 +138,8 @@ export default {
     'page-section': PageSection,
     SectionContent,
     Intersect,
-    GuestModalTrigger
+    GuestModalTrigger,
+    SponsorsComponent
   },
   computed: {
     ...mapGetters({
