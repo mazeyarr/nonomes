@@ -100,7 +100,7 @@
                     </a>
                   </p>
                   <p :style="{color: textColor}" class="mb-md-0">
-                    Ma - Vr, 8:00-18:00
+                    Ma - Vr, 11:00-17:00
                   </p>
                 </mdb-col>
               </transition>
@@ -111,11 +111,11 @@
                     <mdb-icon icon="envelope" />
                   </mdb-btn>
                   <p :style="{color: textColor}">
-                    Whatsapp
+                    E-mailadres
                   </p>
                   <p :style="{color: textColor}" class="mb-md-0">
                     <a href="mailto:info@nonomes.nl" :style="{color: textColor}">
-                      06-26814198
+                      info@nonomes.nl
                     </a>
                   </p>
                 </mdb-col>
