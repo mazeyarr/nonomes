@@ -159,7 +159,7 @@ export default {
       meta: [
         {
           hid: 'og:title',
-          name: 'S.V.A.A. NoNoMes - Home',
+          name: 'S.V.A.A. NoNoMes',
           content: `S.V.A.A. NoNoMes is een bruisende studentenvereniging met haar sociëteit in hartje Amsterdam, Jaarlijks organiseert NoNoMes de leukste activiteiten!`
         },
         {

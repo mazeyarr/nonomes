@@ -3,6 +3,8 @@ import VueSanitizeHtml from 'vue-sanitize-html-plugin'
 
 Vue.use(VueSanitizeHtml, {
   allowedTags: [
+    'div',
+    'button',
     'h1',
     'h2',
     'h3',
@@ -39,7 +41,7 @@ Vue.use(VueSanitizeHtml, {
     'article'
   ],
   allowedAttributes: {
-    a: ['href', 'name', 'target'],
+    a: ['href', 'name', 'target', 'class'],
     img: ['src', 'height', 'width', 'class'],
     div: ['class'],
     figure: ['class'],

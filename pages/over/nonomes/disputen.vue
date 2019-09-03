@@ -129,7 +129,7 @@ export default {
         male: [
           {
             id: 2,
-            name: 'Ridders',
+            name: 'Het Broederschap der Kruisridders',
             logoSrc: '/images/dispuut-wapens/rid.png',
             url: 'http://www.kruisridders.nl/',
             description:
@@ -138,11 +138,11 @@ export default {
           },
           {
             id: 4,
-            name: 'Auxillia',
+            name: 'AUXILIA',
             logoSrc: '/images/dispuut-wapens/aux.png',
             url: 'http://auxilia.amsterdam/',
             description:
-              'AUXILIA heeft een rijk verleden maar een frisse wind in de zeilen. Ontdek met ons de mooie dingen binnen Amsterdam en daar buiten. Stevig en tot laat staan wij op de dinsdagavond in de Soos. Voor eenieder is er plek binnen ons divers maar gebonden dispuut. Oost West, Thuis Best.',
+              'Een AUXILIAAN is betrokken, ambitieus en vriendelijk, hetgeen AUXILIA een divers doch betrokken dispuut maakt waar vriendschap al meer dan 25 jaar de boventoon voert. Niks is dan ook te gek voor ons: verre reizen, senaatsfuncties, ondernemen - ieder lid streeft zijn eigen aspiraties na en wordt hierin door het dispuut ten volste gesteund. Daarnaast dragen we binnen NoNoMes ons eigen steentje bij, waardoor we met recht de hulptroepen van de vereniging genoemd mogen worden. Met een rijk verleden, maar een frisse wind in de zeilen halen wij dan ook alles uit het studentenleven.',
             show: false
           },
           {
@@ -176,7 +176,7 @@ export default {
           },
           {
             id: 2,
-            name: 'Born',
+            name: 'BORN',
             logoSrc: '/images/dispuut-wapens/bor.png',
             url: 'http://www.bornamsterdam.nl/',
             description:
@@ -185,7 +185,7 @@ export default {
           },
           {
             id: 3,
-            name: 'Lux',
+            name: 'LUX',
             logoSrc: '/images/dispuut-wapens/lux.png',
             url: 'http://www.luxamsterdam.nl/',
             description:

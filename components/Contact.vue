@@ -12,7 +12,7 @@
               <div class="form-header green accent-3">
                 <h3 class="mt-2">
                   <mdb-icon icon="envelope" />
-                  Stuur een berichtje:
+                  Stuur een berichtje
                 </h3>
               </div>
               <p class="dark-grey-text" />
@@ -29,7 +29,7 @@
                 <mdb-input
                   id="form-email"
                   icon="envelope"
-                  label="Je E-mail adres"
+                  label="Je E-mailadres"
                   iconClass="grey-text"
                   type="text"
                 />
@@ -76,7 +76,7 @@
           <address>
             <mdb-row class="text-center">
               <transition name="page-intro-zoom">
-                <mdb-col v-show="objectToAnimate(sectionName,'locationIcon').show" md="4">
+                <mdb-col v-show="objectToAnimate(sectionName,'locationIcon').show" md="3">
                   <mdb-btn tag="a" floating color="yellow" class="accent-2" @click="navigateTo">
                     <mdb-icon icon="map-marker" />
                   </mdb-btn>
@@ -90,7 +90,7 @@
               </transition>
 
               <transition name="page-intro-zoom">
-                <mdb-col v-show="objectToAnimate(sectionName,'phoneIcon').show" md="4">
+                <mdb-col v-show="objectToAnimate(sectionName,'phoneIcon').show" md="3">
                   <mdb-btn tag="a" href="tel:+310206273067" floating color="green" class="accent-2">
                     <mdb-icon icon="phone" />
                   </mdb-btn>
@@ -106,16 +106,32 @@
               </transition>
 
               <transition name="page-intro-zoom">
-                <mdb-col v-show="objectToAnimate(sectionName,'emailIcon').show" md="4">
+                <mdb-col v-show="objectToAnimate(sectionName,'emailIcon').show" md="3">
                   <mdb-btn tag="a" href="mailto:info@nonomes.nl" floating color="purple" class="accent-2">
                     <mdb-icon icon="envelope" />
                   </mdb-btn>
                   <p :style="{color: textColor}">
-                    Info
+                    Whatsapp
                   </p>
                   <p :style="{color: textColor}" class="mb-md-0">
                     <a href="mailto:info@nonomes.nl" :style="{color: textColor}">
-                      info@nonomes.nl
+                      06-26814198
+                    </a>
+                  </p>
+                </mdb-col>
+              </transition>
+
+              <transition name="page-intro-zoom">
+                <mdb-col v-show="objectToAnimate(sectionName,'emailIcon').show" md="3">
+                  <mdb-btn tag="a" href="https://wa.me/31626814198 " floating color="green" class="accent-2">
+                    <mdb-icon fab icon="whatsapp" />
+                  </mdb-btn>
+                  <p :style="{color: textColor}">
+                    Whatsapp
+                  </p>
+                  <p :style="{color: textColor}" class="mb-md-0">
+                    <a href="mailto:info@nonomes.nl" :style="{color: textColor}">
+                      Stuur een berichtje!
                     </a>
                   </p>
                 </mdb-col>
