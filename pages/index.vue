@@ -20,9 +20,9 @@
               section-name="intro-over"
               slot-first
             >
-              <GuestModalTrigger :modal-id="2" class="mb-5 mb-md-0" type="button" color="success">
-                Word Lid!
-              </GuestModalTrigger>
+              <!--              <GuestModalTrigger :modal-id="2" class="mb-5 mb-md-0" type="button" color="success">-->
+              <!--                Word Lid!-->
+              <!--              </GuestModalTrigger>-->
 
               <video v-show="device.isSmall" class="video-fluid" autoplay muted controls>
                 <source src="/videos/promotie_video.mp4" type="video/mp4">
@@ -57,30 +57,30 @@
         </page-section>
       </intersect>
 
-      <intersect @enter="animateSection('intro-inschrijvingen')">
-        <page-section
-          id="intro-inschrijvingen"
-          class="bg-nonomes-blue"
-        >
-          <transition name="page-intro-zoom">
-            <SectionContent
-              v-show="sectionFindByName('intro-inschrijvingen').show"
-              section-name="intro-inschrijvingen"
-              slot-first
-            >
-              <template v-slot:footer>
-                <mdb-row class="mb-5 w-100" center>
-                  <mdb-col col="6">
-                    <GuestModalTrigger :modal-id="2" type="button" block color="success">
-                      Ik wil me inschrijven !
-                    </GuestModalTrigger>
-                  </mdb-col>
-                </mdb-row>
-              </template>
-            </SectionContent>
-          </transition>
-        </page-section>
-      </intersect>
+<!--      <intersect @enter="animateSection('intro-inschrijvingen')">-->
+<!--        <page-section-->
+<!--          id="intro-inschrijvingen"-->
+<!--          class="bg-nonomes-blue"-->
+<!--        >-->
+<!--          <transition name="page-intro-zoom">-->
+<!--            <SectionContent-->
+<!--              v-show="sectionFindByName('intro-inschrijvingen').show"-->
+<!--              section-name="intro-inschrijvingen"-->
+<!--              slot-first-->
+<!--            >-->
+<!--              <template v-slot:footer>-->
+<!--                <mdb-row class="mb-5 w-100" center>-->
+<!--                  <mdb-col col="6">-->
+<!--                    &lt;!&ndash;                    <GuestModalTrigger :modal-id="2" type="button" block color="success">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                      Ik wil me inschrijven !&ndash;&gt;-->
+<!--                    &lt;!&ndash;                    </GuestModalTrigger>&ndash;&gt;-->
+<!--                  </mdb-col>-->
+<!--                </mdb-row>-->
+<!--              </template>-->
+<!--            </SectionContent>-->
+<!--          </transition>-->
+<!--        </page-section>-->
+<!--      </intersect>-->
 
       <intersect @enter="animateSection('intro-gallery')">
         <page-section id="intro-gallery">
@@ -138,6 +138,7 @@ export default {
     'page-section': PageSection,
     SectionContent,
     Intersect,
+    // eslint-disable-next-line vue/no-unused-components
     GuestModalTrigger,
     SponsorsComponent
   },

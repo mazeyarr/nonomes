@@ -72,11 +72,11 @@
           Foto's
         </mdb-nav-item>
 
-        <GuestModalTrigger :modal-id="2" type="in-case">
-          <mdb-nav-item anchor-class="white-text">
-            Word lid!
-          </mdb-nav-item>
-        </GuestModalTrigger>
+        <!--        <GuestModalTrigger :modal-id="2" type="in-case">-->
+        <!--          <mdb-nav-item anchor-class="white-text">-->
+        <!--            Word lid!-->
+        <!--          </mdb-nav-item>-->
+        <!--        </GuestModalTrigger>-->
 
         <mdb-nav-item
           anchor-class="white-text"
@@ -94,13 +94,13 @@
         <!--          Disputen-->
         <!--        </mdb-nav-item>-->
 
-        <mdb-nav-item
-          anchor-class="white-text"
-          href="https://forms.gle/25LvgKpcE7Pc5Je48"
-          target="_blank"
-        >
-          Slapen bij NoNoMes
-        </mdb-nav-item>
+        <!--        <mdb-nav-item-->
+        <!--          anchor-class="white-text"-->
+        <!--          href="https://forms.gle/25LvgKpcE7Pc5Je48"-->
+        <!--          target="_blank"-->
+        <!--        >-->
+        <!--          Slapen bij NoNoMes-->
+        <!--        </mdb-nav-item>-->
 
         <mdb-nav-item
           anchor-class="white-text"
@@ -146,6 +146,7 @@ export default {
     mdbDropdown,
     mdbDropdownMenu,
     mdbDropdownToggle,
+    // eslint-disable-next-line vue/no-unused-components
     GuestModalTrigger: ModalTrigger
   },
   data() {
