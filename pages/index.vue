@@ -49,10 +49,11 @@
           class="even pb-5"
         >
           <transition name="page-intro-slide-top">
-            <SectionContent
-              v-show="sectionFindByName('intro-agenda').show"
-              section-name="intro-agenda"
-            />
+            <strong>Hou onze social media in de gaten!</strong>
+<!--            <SectionContent-->
+<!--              v-show="sectionFindByName('intro-agenda').show"-->
+<!--              section-name="intro-agenda"-->
+<!--            />-->
           </transition>
         </page-section>
       </intersect>

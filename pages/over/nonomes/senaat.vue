@@ -17,16 +17,15 @@
                   <mdb-card-body>
                     <div class="form-header green accent-4">
                       <h3 class="mt-2">
-                        <mdb-icon icon="at" />
                         Vereniging
                       </h3>
                     </div>
 
                     <p class="dark-grey-text">
-                      <strong><i>P</i></strong> reases
+                      <strong><i>P</i></strong> raeses
                     </p>
                     <p>
-                      <mdb-icon icon="chess-king" class="text-green" /> J.T.J. Toorenburg
+                      <mdb-icon icon="chess-king" class="text-green" /> A.E. Versteegh
                     </p>
                     <a href="mailto:Praeses@nonomes.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> Praeses@nonomes.nl
@@ -37,7 +36,7 @@
                       <strong><i>Ab A</i></strong>ctis
                     </p>
                     <p>
-                      <mdb-icon icon="at" class="text-green" /> M.S. De Bruin
+                      <mdb-icon icon="at" class="text-green" /> R.C. Bisschop
                     </p>
                     <a href="mailto:Info@nonomes.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> Info@nonomes.nl
@@ -49,7 +48,7 @@
                       <strong><i>Q</i></strong>uaestor
                     </p>
                     <p>
-                      <mdb-icon icon="coins" class="text-green" /> M. Kroon
+                      <mdb-icon icon="coins" class="text-green" /> S. Vis
                     </p>
                     <a href="mailto:Quaestor@nonomes.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> Quaestor@nonomes.nl
@@ -65,14 +64,14 @@
             <mdb-row>
               <mdb-col>
                 <h2 class="text-black text-center">
-                  Senaat Toorenburg
+                  Senaat Versteegh
                 </h2>
               </mdb-col>
             </mdb-row>
             <mdb-row class="mdb-lightbox pt-5">
               <mdb-col @click.native="show(0)">
                 <figure>
-                  <img src="/images/nonomes-senaat.jpeg" class="img-fluid" alt="">
+                  <img src="/images/Nonomes-senaat-Versteegh.jpg" class="img-fluid" alt="">
                 </figure>
               </mdb-col>
             </mdb-row>
@@ -90,18 +89,17 @@
                   <mdb-card-body>
                     <div class="form-header form-header grey">
                       <h3 class="mt-2">
-                        <mdb-icon icon="at" />
-                        Stichting
+                        Directie
                       </h3>
                     </div>
                     <p class="dark-grey-text">
                       Voorzitter
                     </p>
                     <p>
-                      <mdb-icon icon="user-tie" class="text-green" /> J.J. De Fluiter
+                      <mdb-icon icon="user-tie" class="text-green" /> C.F.A. Zwijnenburg
                     </p>
-                    <a href="mailto:directie@nonomes.nl">
-                      <mdb-icon icon="envelope" class="text-blue" /> directie@nonomes.nl
+                    <a href="mailto:voorzitter@deheiligezeug.nl">
+                      <mdb-icon icon="envelope" class="text-blue" /> voorzitter@deheiligezeug.nl
                     </a>
                     <hr>
 
@@ -109,10 +107,10 @@
                       Penningmeester
                     </p>
                     <p>
-                      <mdb-icon icon="hand-holding-usd" class="text-green" /> N.M. Pijnenburg
+                      <mdb-icon icon="hand-holding-usd" class="text-green" /> L. Geijtenbeek
                     </p>
-                    <a href="mailto:directie@nonomes.nl">
-                      <mdb-icon icon="envelope" class="text-blue" /> directie@nonomes.nl
+                    <a href="mailto:penningmeester@deheiligezeug.nl">
+                      <mdb-icon icon="envelope" class="text-blue" /> penningmeester@deheiligezeug.nl
                     </a>
                     <hr>
 
@@ -120,10 +118,10 @@
                       Secretaris
                     </p>
                     <p>
-                      <mdb-icon icon="newspaper" class="text-green" /> F.H.L. Van Breevoort
+                      <mdb-icon icon="newspaper" class="text-green" /> T. van Baar
                     </p>
-                    <a href="mailto:directie@nonomes.nl">
-                      <mdb-icon icon="envelope" class="text-blue" /> directie@nonomes.nl
+                    <a href="mailto:info@deheiligezeug.nl">
+                      <mdb-icon icon="envelope" class="text-blue" /> info@deheiligezeug.nl
                     </a>
                     <hr>
                   </mdb-card-body>
