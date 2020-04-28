@@ -72,11 +72,11 @@
           Foto's
         </mdb-nav-item>
 
-        <!--        <GuestModalTrigger :modal-id="2" type="in-case">-->
-        <!--          <mdb-nav-item anchor-class="white-text">-->
-        <!--            Word lid!-->
-        <!--          </mdb-nav-item>-->
-        <!--        </GuestModalTrigger>-->
+        <GuestModalTrigger :modal-id="2" type="in-case">
+          <mdb-nav-item anchor-class="white-text">
+            Word lid!
+          </mdb-nav-item>
+        </GuestModalTrigger>
 
         <mdb-nav-item
           anchor-class="white-text"
@@ -86,13 +86,13 @@
           Q&A
         </mdb-nav-item>
 
-        <!--        <mdb-nav-item-->
-        <!--          anchor-class="white-text"-->
-        <!--          to="/over/nonomes/disputen"-->
-        <!--          :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"-->
-        <!--        >-->
-        <!--          Disputen-->
-        <!--        </mdb-nav-item>-->
+        <mdb-nav-item
+          anchor-class="white-text"
+          to="/over/nonomes/disputen"
+          :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"
+        >
+          Disputen
+        </mdb-nav-item>
 
         <!--        <mdb-nav-item-->
         <!--          anchor-class="white-text"-->

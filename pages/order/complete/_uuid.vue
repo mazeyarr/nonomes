@@ -114,7 +114,6 @@ export default {
     if (status === 203) {
       error({ statusCode: 404, message: 'Niet gevonden... 🤔' })
     }
-
     return data
   },
   mounted() {

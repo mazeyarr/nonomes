@@ -49,39 +49,43 @@
           class="even pb-5"
         >
           <transition name="page-intro-slide-top">
-            <strong>Hou onze social media in de gaten!</strong>
-<!--            <SectionContent-->
-<!--              v-show="sectionFindByName('intro-agenda').show"-->
-<!--              section-name="intro-agenda"-->
-<!--            />-->
+            <!--            <SectionContent-->
+            <!--              v-show="sectionFindByName('intro-agenda').show"-->
+            <!--              section-name="intro-agenda"-->
+            <!--            />-->
+            <div class="d-flex justify-content-center align-items-center h-100 h-100 pl-2 pr-2 pl-md-5 pr-md-5 pb-md-5">
+              <h2 class="text-black">
+                ⚠️ Hou onze social media in de gaten! ⚠️
+              </h2>
+            </div>
           </transition>
         </page-section>
       </intersect>
 
-<!--      <intersect @enter="animateSection('intro-inschrijvingen')">-->
-<!--        <page-section-->
-<!--          id="intro-inschrijvingen"-->
-<!--          class="bg-nonomes-blue"-->
-<!--        >-->
-<!--          <transition name="page-intro-zoom">-->
-<!--            <SectionContent-->
-<!--              v-show="sectionFindByName('intro-inschrijvingen').show"-->
-<!--              section-name="intro-inschrijvingen"-->
-<!--              slot-first-->
-<!--            >-->
-<!--              <template v-slot:footer>-->
-<!--                <mdb-row class="mb-5 w-100" center>-->
-<!--                  <mdb-col col="6">-->
-<!--                    &lt;!&ndash;                    <GuestModalTrigger :modal-id="2" type="button" block color="success">&ndash;&gt;-->
-<!--                    &lt;!&ndash;                      Ik wil me inschrijven !&ndash;&gt;-->
-<!--                    &lt;!&ndash;                    </GuestModalTrigger>&ndash;&gt;-->
-<!--                  </mdb-col>-->
-<!--                </mdb-row>-->
-<!--              </template>-->
-<!--            </SectionContent>-->
-<!--          </transition>-->
-<!--        </page-section>-->
-<!--      </intersect>-->
+      <intersect @enter="animateSection('intro-inschrijvingen')">
+        <page-section
+          id="intro-inschrijvingen"
+          class="bg-nonomes-blue"
+        >
+          <transition name="page-intro-zoom">
+            <SectionContent
+              v-show="sectionFindByName('intro-inschrijvingen').show"
+              section-name="intro-inschrijvingen"
+              slot-first
+            >
+              <template v-slot:footer>
+                <mdb-row class="mb-5 w-100" center>
+                  <mdb-col col="6">
+                    <GuestModalTrigger :modal-id="2" type="button" block color="success">
+                      Ik wil me inschrijven !
+                    </GuestModalTrigger>
+                  </mdb-col>
+                </mdb-row>
+              </template>
+            </SectionContent>
+          </transition>
+        </page-section>
+      </intersect>
 
       <intersect @enter="animateSection('intro-gallery')">
         <page-section id="intro-gallery">
