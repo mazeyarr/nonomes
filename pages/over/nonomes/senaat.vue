@@ -71,7 +71,7 @@
             <mdb-row class="mdb-lightbox pt-5">
               <mdb-col @click.native="show(0)">
                 <figure>
-                  <img src="/images/Nonomes-senaat-Versteegh.jpg" class="img-fluid" alt="">
+                  <img :src="imgs" class="img-fluid" alt="">
                 </figure>
               </mdb-col>
             </mdb-row>
