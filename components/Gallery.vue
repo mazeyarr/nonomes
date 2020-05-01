@@ -215,7 +215,7 @@ export default {
 <style scoped>
 .gallery-photo {
   object-fit: cover;
-  height: 500px !important;
-  width: 500px !important;
+  height: 100% !important;
+  width: 100% !important;
 }
 </style>
