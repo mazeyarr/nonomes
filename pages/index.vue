@@ -57,7 +57,7 @@
               <mdb-row>
                 <mdb-col col="12">
                   <h4 class="text-black text-center">
-                    ⚠️ Hou onze social media in de gaten! ⚠️
+                    ⚠️ Houd onze social media in de gaten! ⚠️
                   </h4>
                 </mdb-col>
                 <mdb-col col="12">
@@ -95,7 +95,7 @@
                 <mdb-row class="mb-5 w-100" center>
                   <mdb-col col="6">
                     <GuestModalTrigger :modal-id="2" type="button" block color="success">
-                      Ik wil me inschrijven !
+                      Ik wil mij inschrijven !
                     </GuestModalTrigger>
                   </mdb-col>
                 </mdb-row>

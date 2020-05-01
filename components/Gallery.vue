@@ -155,17 +155,17 @@ export default {
   data() {
     return {
       imgs: [
-        '/images/gallery/nonomes-gallery-1.jpeg',
+        '/images/gallery/nonomes-gallery-1.jpg',
         '/images/gallery/nonomes-gallery-2.jpg',
         '/images/gallery/nonomes-gallery-3.jpg',
         '/images/gallery/nonomes-gallery-4.jpg',
-        '/images/gallery/nonomes-gallery-15.jpeg',
+        '/images/gallery/nonomes-gallery-15.jpg',
         '/images/gallery/nonomes-gallery-18.jpg'
       ],
       imgs2: [
         '/images/gallery/nonomes-gallery-17.jpg',
-        '/images/gallery/nonomes-gallery-14.jpeg',
-        '/images/gallery/nonomes-gallery-13.jpeg',
+        '/images/gallery/nonomes-gallery-14.jpg',
+        '/images/gallery/nonomes-gallery-13.jpg',
         '/images/gallery/nonomes-gallery-8.jpg',
         '/images/gallery/nonomes-gallery-7.jpg',
         '/images/gallery/nonomes-gallery-5.jpg'

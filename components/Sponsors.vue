@@ -261,8 +261,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  max-height: 200px;
+  height: 70px;
+  max-height: 70px;
 }
 .sponsor-view > img {
   display: block;

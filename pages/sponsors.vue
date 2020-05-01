@@ -85,7 +85,7 @@ export default {
         content: `<p>Studentenvereniging NoNoMes kan op veel verschillende manieren iets voor uw bedrijf betekenen: van adverteren op onze website tot deelname aan een bedrijvendiner. Er zijn erg veel mogelijkheden!
 NoNoMes telt rond de 300 actieve leden en heeft een groot reünistenbestand.<br><br>
 Al deze diverse leden zorgen voor een leuke mix van verschillende persoonlijkheden, interesses, hobby’s en studies. Echter kunnen onze leden elkaar juist ook vinden in gemeenschappelijke kenmerken, zoals een opleiding, motivatie voor het maken van carrière, een groot sociaal netwerk en ontwikkelingen op organisatorisch vlak door bestuurlijke activiteiten binnen de vereniging te bekleden. <br><br> Onze studenten zijn gedreven en goed voorbereid op de maatschappij. Hierdoor vormen zij een interessante doelgroep voor bedrijven. <br> <br>
-Mocht u interesse hebben in een samenwerking met onze studentenvereniging of meer over de diverse mogelijkheden te weten wil komen, kunt u hier onze sponsorbrochure downloaden of u kunt contact opnemen met onze Quaestor, Mila Kroon, via onderstaande contactgegevens:<p>
+Mocht u interesse hebben in een samenwerking met onze studentenvereniging of meer over de diverse mogelijkheden te weten wil komen, kunt u hier onze sponsorbrochure downloaden of u kunt contact opnemen met onze Quaestor, Serena Vis, via onderstaande contactgegevens<p>
 <p>PR NoNoMes</p>
 <p>Warmoesstraat 119-1</p>
 <p>1012JA Amsterdam</p>
@@ -318,8 +318,8 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  max-height: 200px;
+  height: 100px;
+  max-height: 100px;
 }
 .sponsor-view > img {
   display: block;
