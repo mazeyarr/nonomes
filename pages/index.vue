@@ -53,10 +53,28 @@
             <!--              v-show="sectionFindByName('intro-agenda').show"-->
             <!--              section-name="intro-agenda"-->
             <!--            />-->
-            <div class="d-flex justify-content-center align-items-center h-100 h-100 pl-2 pr-2 pl-md-5 pr-md-5 pb-md-5">
-              <h2 class="text-black">
-                ⚠️ Hou onze social media in de gaten! ⚠️
-              </h2>
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <mdb-row>
+                <mdb-col col="12">
+                  <h4 class="text-black text-center">
+                    ⚠️ Hou onze social media in de gaten! ⚠️
+                  </h4>
+                </mdb-col>
+                <mdb-col col="12">
+                  <mdb-row class="justify-content-center">
+                    <mdb-col col="1" class="text-center">
+                      <a href="https://www.instagram.com/svaa_nonomes/" target="_blank">
+                        <mdb-icon fab icon="instagram" size="3x" class="indigo-text pointer" />
+                      </a>
+                    </mdb-col>
+                    <mdb-col col="1" class="text-center">
+                      <a href="https://www.facebook.com/svaa.nonomes" target="_blank">
+                        <mdb-icon fab icon="facebook" size="3x" class="facebook-text pointer" />
+                      </a>
+                    </mdb-col>
+                  </mdb-row>
+                </mdb-col>
+              </mdb-row>
             </div>
           </transition>
         </page-section>
@@ -131,7 +149,7 @@ import Intersect from 'vue-intersect'
 import GuestModalTrigger from '@/components/modals/Standard/Trigger.vue'
 import SponsorsComponent from '@/components/Sponsors.vue'
 
-import { mdbContainer, mdbRow, mdbCol } from 'mdbvue'
+import { mdbContainer, mdbRow, mdbCol, mdbIcon } from 'mdbvue'
 
 export default {
   components: {
@@ -139,6 +157,7 @@ export default {
     mdbContainer,
     mdbRow,
     mdbCol,
+    mdbIcon,
     HomeCarousel,
     'page-section': PageSection,
     SectionContent,
@@ -198,3 +217,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.facebook-text {
+  color: #0172e7;
+}
+
+.pointer {
+  cursor: pointer;
+}
+</style>
