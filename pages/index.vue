@@ -55,6 +55,11 @@
             <!--            />-->
             <div class="d-flex justify-content-center align-items-center h-100">
               <mdb-row>
+                <mdb-col col="12" class="mb-5">
+                  <h2 class="text-black text-center">
+                    Evenementen
+                  </h2>
+                </mdb-col>
                 <mdb-col col="12">
                   <h4 class="text-black text-center">
                     ⚠️ Houd onze social media in de gaten! ⚠️
