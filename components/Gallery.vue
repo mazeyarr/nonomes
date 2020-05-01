@@ -14,32 +14,32 @@
         <mdb-row class="mdb-lightbox px-5">
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(0)">
             <figure>
-              <img :src="imgs[0]" class="img-fluid" alt="">
+              <img :src="imgs[0]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(1)">
             <figure>
-              <img :src="imgs[1]" class="img-fluid" alt="">
+              <img :src="imgs[1]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(2)">
             <figure>
-              <img :src="imgs[2]" class="img-fluid" alt="">
+              <img :src="imgs[2]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(3)">
             <figure>
-              <img :src="imgs[3]" class="img-fluid" alt="">
+              <img :src="imgs[3]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(4)">
             <figure>
-              <img :src="imgs[4]" class="img-fluid" alt="">
+              <img :src="imgs[4]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox(5)">
             <figure>
-              <img :src="imgs[5]" class="img-fluid" alt="">
+              <img :src="imgs[5]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
         </mdb-row>
@@ -48,32 +48,32 @@
         <mdb-row class="mdb-lightbox px-2">
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(0)">
             <figure>
-              <img :src="imgs2[0]" class="img-fluid" alt="">
+              <img :src="imgs2[0]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(1)">
             <figure>
-              <img :src="imgs2[1]" class="img-fluid" alt="">
+              <img :src="imgs2[1]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(2)">
             <figure>
-              <img :src="imgs2[2]" class="img-fluid" alt="">
+              <img :src="imgs2[2]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(3)">
             <figure>
-              <img :src="imgs2[3]" class="img-fluid" alt="">
+              <img :src="imgs2[3]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(4)">
             <figure>
-              <img :src="imgs2[4]" class="img-fluid" alt="">
+              <img :src="imgs2[4]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox2(5)">
             <figure>
-              <img :src="imgs2[5]" class="img-fluid" alt="">
+              <img :src="imgs2[5]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
         </mdb-row>
@@ -82,32 +82,32 @@
         <mdb-row class="mdb-lightbox px-2">
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(0)">
             <figure>
-              <img :src="imgs3[0]" class="img-fluid" alt="">
+              <img :src="imgs3[0]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(1)">
             <figure>
-              <img :src="imgs3[1]" class="img-fluid" alt="">
+              <img :src="imgs3[1]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(2)">
             <figure>
-              <img :src="imgs3[2]" class="img-fluid" alt="">
+              <img :src="imgs3[2]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(3)">
             <figure>
-              <img :src="imgs3[3]" class="img-fluid" alt="">
+              <img :src="imgs3[3]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(4)">
             <figure>
-              <img :src="imgs3[4]" class="img-fluid" alt="">
+              <img :src="imgs3[4]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
           <mdb-col md="4" class="d-md-inline-block" @click.native="showLightbox3(5)">
             <figure>
-              <img :src="imgs3[5]" class="img-fluid" alt="">
+              <img :src="imgs3[5]" class="img-fluid gallery-photo" alt="">
             </figure>
           </mdb-col>
         </mdb-row>
@@ -213,8 +213,9 @@ export default {
 </script>
 
 <style scoped>
-img {
+.gallery-photo {
+  object-fit: cover;
   height: 500px !important;
-  width: 600px !important;
+  width: 500px !important;
 }
 </style>
