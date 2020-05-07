@@ -19,6 +19,9 @@
       :checked="value"
       class="d-none"
     >
+
+    <p class="pl-4 mt-2 font-italic">* Het kennismakingsweekend zal plaatsvinden van 11-13 september</p>
+    <p class="pl-4 mt-2 font-italic">* Onder voorbehoud wegens COVID-19</p>
   </mdb-view>
 </template>
 
