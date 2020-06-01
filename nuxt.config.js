@@ -119,6 +119,7 @@ module.exports = {
     '~/plugins/vue-html-sanitizer.js',
     '~/plugins/vue-html-to-paper.js',
     '~/plugins/vue-facebook-pixel.js',
+    '~/plugins/vue-instagram.js',
     '~/plugins/axios.js',
     { src: '~/plugins/hotjar.js', ssr: false }
   ],

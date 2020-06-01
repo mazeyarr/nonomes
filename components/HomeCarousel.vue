@@ -87,4 +87,10 @@ export default {
   height: 100vh !important;
   width: 100% !important;
 }
+
+@media only screen and (max-width: 1200px) {
+  .carousel {
+    height: unset;
+  }
+}
 </style>

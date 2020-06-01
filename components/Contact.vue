@@ -5,62 +5,6 @@
     </h2>
     <p :style="{color: textColor}" class="text-center w-responsive mx-auto" />
     <mdb-row>
-      <transition name="page-intro-slide-top">
-        <mdb-col v-show="objectToAnimate(sectionName,'form').show" lg="5" class="lg-0 mb-4">
-          <mdb-card>
-            <mdb-card-body>
-              <div class="form-header green accent-3">
-                <h3 class="mt-2">
-                  <mdb-icon icon="envelope" />
-                  Stuur een berichtje
-                </h3>
-              </div>
-              <p class="dark-grey-text" />
-              <div class="md-form">
-                <mdb-input
-                  id="form-name"
-                  icon="user"
-                  label="Volledige naam"
-                  iconClass="grey-text"
-                  type="text"
-                />
-              </div>
-              <div class="md-form">
-                <mdb-input
-                  id="form-email"
-                  icon="envelope"
-                  label="Je E-mailadres"
-                  iconClass="grey-text"
-                  type="text"
-                />
-              </div>
-              <div class="md-form">
-                <mdb-input
-                  id="form-subject"
-                  icon="tag"
-                  label="Onderwerp"
-                  iconClass="grey-text"
-                  type="text"
-                />
-              </div>
-              <div class="md-form">
-                <mdb-textarea
-                  id="form-text"
-                  icon="pencil"
-                  label="Maak er een leuk verhaal van..."
-                  iconClass="grey-text"
-                />
-              </div>
-              <div class="text-center">
-                <mdb-btn class="green accent-3">
-                  Submit
-                </mdb-btn>
-              </div>
-            </mdb-card-body>
-          </mdb-card>
-        </mdb-col>
-      </transition>
-
       <transition name="page-intro-slide-right">
         <mdb-col v-show="objectToAnimate(sectionName,'map').show" lg="7">
           <div id="map-container" class="rounded z-depth-1-half map-container" style="height: 400px">
@@ -138,6 +82,62 @@
               </transition>
             </mdb-row>
           </address>
+        </mdb-col>
+      </transition>
+
+      <transition name="page-intro-slide-top">
+        <mdb-col v-show="objectToAnimate(sectionName,'form').show" lg="5" class="lg-0 mb-4">
+          <mdb-card>
+            <mdb-card-body>
+              <div class="form-header green accent-3">
+                <h3 class="mt-2">
+                  <mdb-icon icon="envelope" />
+                  Stuur een berichtje
+                </h3>
+              </div>
+              <p class="dark-grey-text" />
+              <div class="md-form">
+                <mdb-input
+                  id="form-name"
+                  icon="user"
+                  label="Volledige naam"
+                  iconClass="grey-text"
+                  type="text"
+                />
+              </div>
+              <div class="md-form">
+                <mdb-input
+                  id="form-email"
+                  icon="envelope"
+                  label="Je E-mailadres"
+                  iconClass="grey-text"
+                  type="text"
+                />
+              </div>
+              <div class="md-form">
+                <mdb-input
+                  id="form-subject"
+                  icon="tag"
+                  label="Onderwerp"
+                  iconClass="grey-text"
+                  type="text"
+                />
+              </div>
+              <div class="md-form">
+                <mdb-textarea
+                  id="form-text"
+                  icon="pencil"
+                  label="Maak er een leuk verhaal van..."
+                  iconClass="grey-text"
+                />
+              </div>
+              <div class="text-center">
+                <mdb-btn class="green accent-3">
+                  Submit
+                </mdb-btn>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
         </mdb-col>
       </transition>
     </mdb-row>

@@ -77,10 +77,10 @@
         <mdb-navbar-nav left>
           <mdb-nav-item
             anchor-class="white-text"
-            to="/over/nonomes/4/Q&A"
-            :class="activeRoute === '/over/nonomes/Q&A' ? 'active' : ''"
+            to="/over/nonomes/4/Activiteiten"
+            :class="activeRoute === '/over/nonomes/Activiteiten' ? 'active' : ''"
           >
-            Q&A
+            Activiteiten
           </mdb-nav-item>
 
           <mdb-nav-item

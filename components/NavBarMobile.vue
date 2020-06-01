@@ -2,7 +2,6 @@
   <mdb-navbar
     id="navbar"
     class="p-3 pr-4 position-fixed bg-nonomes-blue"
-    :style="opacity !== 0 ? `opacity: ${opacity};` : `opacity: 0.2;`"
     dark
   >
     <!-- Navbar brand -->
@@ -80,10 +79,10 @@
 
         <mdb-nav-item
           anchor-class="white-text"
-          to="/over/nonomes/4/Q&A"
-          :class="activeRoute('/over/nonomes/Q&A')"
+          to="/over/nonomes/4/Activiteiten"
+          :class="activeRoute('/over/nonomes/Activiteiten')"
         >
-          Q&A
+          Activiteiten
         </mdb-nav-item>
 
         <mdb-nav-item

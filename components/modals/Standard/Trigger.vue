@@ -4,6 +4,7 @@
       v-if="type === 'button'"
       :block="block"
       :color="color"
+      class="trigger-button"
     >
       <slot />
     </mdb-btn>
@@ -55,4 +56,9 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 350px) {
+  .trigger-button {
+    font-size: 11px;
+  }
+}
 </style>
