@@ -153,7 +153,6 @@ import SectionContent from '@/components/SectionContent.vue'
 import Intersect from 'vue-intersect'
 import GuestModalTrigger from '@/components/modals/Standard/Trigger.vue'
 import SponsorsComponent from '@/components/Sponsors.vue'
-import VueInstagram from 'vue-instagram'
 
 import { mdbContainer, mdbRow, mdbCol, mdbIcon } from 'mdbvue'
 
@@ -171,7 +170,6 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     GuestModalTrigger,
     SponsorsComponent,
-    VueInstagram
   },
   computed: {
     ...mapGetters({
