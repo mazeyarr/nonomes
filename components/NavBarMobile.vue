@@ -46,7 +46,7 @@
               NoNoMes
             </nuxt-link>
 
-            <nuxt-link class="dropdown-item" to="/over">
+            <nuxt-link class="dropdown-item" to="/over/corona">
               Lid worden tijdens Corona!
             </nuxt-link>
 
