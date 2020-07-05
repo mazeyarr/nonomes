@@ -19,6 +19,10 @@
                 <br><br>
                 Tegenwoordig heeft NoNoMes zo’n 300 leden en behoort het tot een van de grote vijf Amsterdamse gezelligheidsverenigingen dat aangesloten is bij de Amsterdamse Kamer van Verenigingen. Daarnaast is NoNoMes ook lid van de Landelijke Kamer van Verenigingen.
               </p>
+
+              <p>
+                Voor meer informatie over NoNoMes, zie ook onze pagina op <a target="_blank" href="https://www.studentenwegwijzer.nl/amsterdam/studentenverenigingen/nonomes/">Studentenwegwijzer</a>
+              </p>
             </article>
           </mdb-col>
         </mdb-row>

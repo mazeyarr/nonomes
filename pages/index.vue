@@ -169,7 +169,7 @@ export default {
     Intersect,
     // eslint-disable-next-line vue/no-unused-components
     GuestModalTrigger,
-    SponsorsComponent,
+    SponsorsComponent
   },
   computed: {
     ...mapGetters({

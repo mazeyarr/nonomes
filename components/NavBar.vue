@@ -40,6 +40,10 @@
                 NoNoMes
               </nuxt-link>
 
+              <nuxt-link class="dropdown-item" to="/over">
+                Lid worden tijdens Corona!
+              </nuxt-link>
+
               <nuxt-link class="dropdown-item" to="/over/nonomes/senaat">
                 De Senaat
               </nuxt-link>

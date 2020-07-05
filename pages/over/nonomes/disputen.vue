@@ -142,7 +142,7 @@ export default {
             logoSrc: '/images/dispuut-wapens/aux.png',
             url: 'http://auxilia.amsterdam/',
             description:
-              'Een AUXILIAAN is betrokken, ambitieus en vriendelijk, hetgeen AUXILIA een divers doch betrokken dispuut maakt waar vriendschap al meer dan 25 jaar de boventoon voert. Niks is dan ook te gek voor ons: verre reizen, senaatsfuncties, ondernemen - ieder lid streeft zijn eigen aspiraties na en wordt hierin door het dispuut ten volste gesteund. Daarnaast dragen we binnen NoNoMes ons eigen steentje bij, waardoor we met recht de hulptroepen van de vereniging genoemd mogen worden. Met een rijk verleden, maar een frisse wind in de zeilen halen wij dan ook alles uit het studentenleven.',
+              'Een AUXILIAAN is actief, ambitieus en vriendelijk, wat AUXILIA tot een divers en betrokken dispuut maakt waar vriendschap al meer dan 25 jaar de boventoon voert. Niets is te gek voor ons: verre reizen, senaatsfuncties, ondernemen - ieder lid streeft zijn eigen aspiraties na en wordt hierin door het dispuut ten volste gesteund. Daarnaast zijn we zowel binnen als buiten NoNoMes zeer actief, waardoor we met trots de hulptroepen van de vereniging genoemd mogen worden. Met een rijk verleden, maar een frisse wind in de zeilen halen wij dan ook alles uit het studentenleven. TUMULTUS!',
             show: false
           },
           {

@@ -1,0 +1,54 @@
+<template>
+  <main :id="`about-main`">
+    <NavBar id="navbar" class-prop="bg-nonomes-blue position-relative" />
+    <mdb-container fluid>
+      <PageSection :id="`about-main`">
+        <mdb-row center class="m-5">
+          <mdb-col md="8">
+            <article class="mb-3">
+              <h1 class="text-black">
+                Lid worden tijdens Corona
+              </h1>
+
+              <p>
+                Wil jij van je studententijd een tijd maken om nooit meer te vergeten? Schrijf je dan in! Houd onze socials in de gaten om digitaal de sfeer te proeven. Wil je meer informatie of heb je nog vragen? Stuur dan een mail naar info@nonomes.nl of app Ruby (0626814198)!
+              </p><br>
+
+              <p>
+                Vanwege de situatie omtrent het coronavirus zal de kennismakingstijd anders verlopen. Momenteel wordt er nog onderzocht hoe de kennismakingstijd precies plaats zal vinden. Houd hierbij voorlopig wel rekening met het weekend van 12 en 13 september. Verdere informatie zal zo snel mogelijk op deze pagina geplaatst worden. Houd deze dus goed in de gaten. Na inschrijving zal je natuurlijk via de mail op de hoogte worden gehouden van de vorderingen omtrent de Coronasituatie.
+              </p><br><br>
+            </article>
+          </mdb-col>
+        </mdb-row>
+      </PageSection>
+    </mdb-container>
+  </main>
+</template>
+
+<script>
+import NavBar from '@/components/NavBar'
+import PageSection from '@/components/PageSection'
+import { mdbContainer, mdbRow, mdbCol } from 'mdbvue'
+export default {
+  name: 'AboutCorona',
+  head() {
+    return {
+      title: 'Lid worden tijdens Corona',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Wil jij van je studententijd een tijd maken om nooit meer te vergeten? Schrijf je dan in! Houd onze socials in de gaten om digitaal de sfeer te proeven. Wil je meer informatie of heb je nog vragen? Stuur dan een mail naar info@nonomes.nl of app Ruby (0626814198)!`
+        }
+      ]
+    }
+  },
+  components: {
+    PageSection,
+    NavBar,
+    mdbContainer,
+    mdbRow,
+    mdbCol
+  }
+}
+</script>

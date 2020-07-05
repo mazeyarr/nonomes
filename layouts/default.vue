@@ -29,13 +29,6 @@ body {
   overflow-x: hidden;
 }
 
-html,
-.container,
-.container-fluid {
-  margin-left: calc(100vw - 100%);
-  margin-right: 0;
-}
-
 * {
   font-family: 'Oxygen', sans-serif;
 }
