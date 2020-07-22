@@ -1,5 +1,5 @@
 <template>
-  <div class="odd pl-5 pr-5 pt-5">
+  <div class="odd pl-5 pr-5 pt-5 content-fix">
     <h2 :style="{color: textColor}" class="d-none d-md-block h1-responsive font-weight-bold text-center">
       Contact
     </h2>
@@ -192,17 +192,7 @@ export default {
   },
   methods: {
     navigateTo: function() {
-      const lat = 52.374052
-      const long = 4.896458
-
-      if (
-        navigator.platform.indexOf('iPhone') !== -1 ||
-        navigator.platform.indexOf('iPod') !== -1 ||
-        navigator.platform.indexOf('iPad') !== -1
-      )
-        window.open(`maps://maps.google.com/maps?daddr=${lat},${long}&amp;ll=`)
-      else
-        window.open(`http://maps.google.com/maps?daddr=${lat},${long}&amp;ll=`)
+      window.open('https://goo.gl/maps/jDVYg6A8nZz5HaSk9')
     }
   }
 }
@@ -211,5 +201,15 @@ export default {
 <style scoped>
 .address-block {
   display: inline-block;
+}
+
+.content-fix {
+  margin-top: 5rem !important;
+}
+
+@media (min-width: 992px) {
+  .content-fix {
+    margin-top: 3rem !important;
+  }
 }
 </style>

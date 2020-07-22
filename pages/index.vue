@@ -67,15 +67,14 @@
                 </mdb-col>
                 <mdb-col col="12">
                   <mdb-row class="justify-content-center">
-                    <mdb-col col="1" class="text-center">
-                      <a href="https://www.instagram.com/svaa_nonomes/" target="_blank">
-                        <mdb-icon fab icon="instagram" size="3x" class="indigo-text pointer" />
-                      </a>
-                    </mdb-col>
-                    <mdb-col col="1" class="text-center">
-                      <a href="https://www.facebook.com/svaa.nonomes" target="_blank">
-                        <mdb-icon fab icon="facebook" size="3x" class="facebook-text pointer" />
-                      </a>
+                    <mdb-col col="12" class="justify-content-center d-flex">
+                      <mdb-btn tag="a" floating color="pink" class="accent-2" @click="navigateTo('https://www.instagram.com/svaa_nonomes/')">
+                        <mdb-icon fab icon="instagram" size="2x" class="pointer" />
+                      </mdb-btn>
+
+                      <mdb-btn tag="a" floating color="indigo" class="accent-2" @click="navigateTo('https://www.facebook.com/svaa.nonomes')">
+                        <mdb-icon fab icon="facebook-f" size="2x" class="facebook-text pointer" />
+                      </mdb-btn>
                     </mdb-col>
                   </mdb-row>
                 </mdb-col>
@@ -97,13 +96,13 @@
               slot-first
             >
               <template v-slot:footer>
-                <mdb-row class="mb-5 w-100" center>
-                  <mdb-col col="6">
+                <div class="w-100 d-flex justify-content-center">
+                  <div>
                     <GuestModalTrigger :modal-id="2" type="button" block color="success">
-                      Ik wil mij inschrijven !
+                      Ik wil mij inschrijven!
                     </GuestModalTrigger>
-                  </mdb-col>
-                </mdb-row>
+                  </div>
+                </div>
               </template>
             </SectionContent>
           </transition>
@@ -154,7 +153,7 @@ import Intersect from 'vue-intersect'
 import GuestModalTrigger from '@/components/modals/Standard/Trigger.vue'
 import SponsorsComponent from '@/components/Sponsors.vue'
 
-import { mdbContainer, mdbRow, mdbCol, mdbIcon } from 'mdbvue'
+import { mdbContainer, mdbRow, mdbCol, mdbIcon, mdbBtn } from 'mdbvue'
 
 export default {
   components: {
@@ -162,6 +161,7 @@ export default {
     mdbContainer,
     mdbRow,
     mdbCol,
+    mdbBtn,
     mdbIcon,
     HomeCarousel,
     'page-section': PageSection,
@@ -218,7 +218,10 @@ export default {
   methods: {
     ...mapActions({
       animateSection: 'pages/animateSection'
-    })
+    }),
+    navigateTo(url) {
+      window.open(url)
+    }
   }
 }
 </script>

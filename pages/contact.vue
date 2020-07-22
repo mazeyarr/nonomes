@@ -48,4 +48,13 @@ export default {
 </script>
 
 <style scoped>
+.content-fix {
+  margin-top: 5rem !important;
+}
+
+@media (min-width: 992px) {
+  .content-fix {
+    margin-top: 3rem !important;
+  }
+}
 </style>

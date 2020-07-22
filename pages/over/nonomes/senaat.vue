@@ -33,7 +33,7 @@
                     <hr>
 
                     <p class="dark-grey-text">
-                      <strong><i>Ab A</i></strong>ctis
+                      <strong><i>Ab</i></strong> Actis
                     </p>
                     <p>
                       <mdb-icon icon="at" class="text-green" /> R.C. Bisschop
@@ -93,7 +93,7 @@
                       </h3>
                     </div>
                     <p class="dark-grey-text">
-                      Voorzitter
+                      <strong><i>V</i></strong>oorzitter
                     </p>
                     <p>
                       <mdb-icon icon="user-tie" class="text-green" /> C.F.A. Zwijnenburg
@@ -104,7 +104,7 @@
                     <hr>
 
                     <p class="dark-grey-text">
-                      Penningmeester
+                      <strong><i>P</i></strong>enning<strong>m</strong>eester
                     </p>
                     <p>
                       <mdb-icon icon="hand-holding-usd" class="text-green" /> L. Geijtenbeek
@@ -115,7 +115,7 @@
                     <hr>
 
                     <p class="dark-grey-text">
-                      Secretaris
+                      <strong><i>S</i></strong>ecretaris
                     </p>
                     <p>
                       <mdb-icon icon="newspaper" class="text-green" /> T. van Baar

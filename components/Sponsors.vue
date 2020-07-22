@@ -40,10 +40,11 @@ export default {
       sponsors: [
         {
           id: 1,
-          name: 'Bankr',
+          name: 'Opzeggen 24',
           imgSrc: '/images/sponsors/sponsor-1.png',
-          link: 'https://bankr.nl/geld-lenen-voor-studenten/',
-          alt: 'Bankr',
+          link:
+            'https://www.opzeggen24.nl/abonnement-opzeggen/videoland-opzeggen.html/',
+          alt: 'videoland opzeggen',
           show: false
         },
         {
@@ -86,14 +87,14 @@ export default {
           alt: 'Becam Financiëren',
           show: false
         },
-        {
-          id: 7,
-          name: 'Best4ugroup',
-          imgSrc: '/images/sponsors/sponsor-7.png',
-          link: 'https://www.best4u.nl/',
-          alt: 'Best4ugroup',
-          show: false
-        },
+        // {
+        //   id: 7,
+        //   name: 'Best4ugroup',
+        //   imgSrc: '/images/sponsors/sponsor-7.png',
+        //   link: 'https://www.best4u.nl/',
+        //   alt: 'Best4ugroup',
+        //   show: false
+        // },
         {
           id: 8,
           name: 'Dakdek-Gigant',
@@ -110,14 +111,14 @@ export default {
           alt: 'Drukbedrijf',
           show: false
         },
-        {
-          id: 10,
-          name: 'Geld.nl',
-          imgSrc: '/images/sponsors/sponsor-10.png',
-          link: 'https://www.geld.nl/',
-          alt: 'Geld.nl',
-          show: false
-        },
+        // {
+        //   id: 10,
+        //   name: 'Geld.nl',
+        //   imgSrc: '/images/sponsors/sponsor-10.png',
+        //   link: 'https://www.geld.nl/',
+        //   alt: 'Geld.nl',
+        //   show: false
+        // },
         {
           id: 11,
           name: 'Huizenmarkt',
@@ -128,10 +129,10 @@ export default {
         },
         {
           id: 12,
-          name: 'Inshared',
+          name: 'Huurzone',
           imgSrc: '/images/sponsors/sponsor-12.png',
-          link: 'https://www.inshared.nl/autoverzekering',
-          alt: 'Inshared',
+          link: 'https://www.huurzone.nl/huren/amsterdam.html',
+          alt: 'huurwoningen amsterdam',
           show: false
         },
         {
@@ -160,18 +161,18 @@ export default {
         },
         {
           id: 16,
-          name: 'Snurk-Expert',
+          name: 'MR Korting',
           imgSrc: '/images/sponsors/sponsor-16.png',
-          link: 'https://www.snurkexpert.nl/overzicht/snurkbeugel.html',
-          alt: 'Snurk-Expert',
+          link: 'https://www.mrkorting.nl/aboutyou.nl',
+          alt: 'kortingscode about you',
           show: false
         },
         {
           id: 17,
-          name: 'Radio-introExpert',
+          name: 'Knaek',
           imgSrc: '/images/sponsors/sponsor-17.png',
-          link: 'https://www.radiocontrolexpert.nl/rc/rc-auto.html',
-          alt: 'Radio-introExpert',
+          link: 'https://www.knaek.nl/studentenkorting/Amsterdam',
+          alt: 'Knaek',
           show: false
         },
         {
@@ -198,14 +199,14 @@ export default {
           alt: 'hoyhoy',
           show: false
         },
-        {
-          id: 21,
-          name: 'Skepp',
-          imgSrc: '/images/sponsors/sponsor-21.jpg',
-          link: 'https://skepp.nl/nl/',
-          alt: 'Skepp',
-          show: false
-        },
+        // {
+        //   id: 21,
+        //   name: 'Skepp',
+        //   imgSrc: '/images/sponsors/sponsor-21.jpg',
+        //   link: 'https://skepp.nl/nl/',
+        //   alt: 'Skepp',
+        //   show: false
+        // },
         {
           id: 22,
           name: 'Pricewise',

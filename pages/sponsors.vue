@@ -3,7 +3,7 @@
     <NavBar id="navbar" class-prop="bg-nonomes-blue position-relative" />
     <mdb-container fluid>
       <PageSection id="sponsors-section">
-        <mdb-row center class="mt-5 mt-md-0">
+        <mdb-row center class="content-fix mt-5 mt-md-0">
           <mdb-col md="6" class="p-3">
             <article>
               <h2 class="text-black">
@@ -325,5 +325,15 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.content-fix {
+  margin-top: 5rem !important;
+}
+
+@media (min-width: 992px) {
+  .content-fix {
+    margin-top: 3rem !important;
+  }
 }
 </style>
