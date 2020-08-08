@@ -60,6 +60,18 @@
                     Evenementen
                   </h2>
                 </mdb-col>
+                <mdb-col col="12" class="text-black text-center">
+                  <h5>UPDATE</h5>
+
+                  <p>Uit de persconferentie van 6 augustus is gebleken dat de introductieperiode dit jaar op een andere manier zal verlopen dan normaal. Omdat dit nieuws allemaal vrij recent is, is er nog veel onduidelijkheid.</p>
+
+                  <p>Momenteel moeten wij afwachten wat de concrete plannen worden, maar wij zijn hard bezig om vooralsnog iedereen de mogelijkheid te geven om kennis te maken met onze mooie vereniging.</p>
+
+                  <p>Hou onze website en sociale media in de gaten om op de hoogte gehouden te worden. Bij verdere vragen kan er een mail gestuurd worden naar
+                    <a href="mailto:info@nonomes.nl.">info@nonomes.nl.</a>
+                  </p>
+                  <hr>
+                </mdb-col>
                 <mdb-col col="12">
                   <h4 class="text-black text-center">
                     ⚠️ Houd onze social media in de gaten! ⚠️
