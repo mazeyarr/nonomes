@@ -17,6 +17,18 @@
               <p>
                 Vanwege de situatie omtrent het coronavirus zal de kennismakingstijd anders verlopen. Momenteel wordt er nog onderzocht hoe de kennismakingstijd precies plaats zal vinden. Houd hierbij voorlopig wel rekening met het weekend van 12 en 13 september. Verdere informatie zal zo snel mogelijk op deze pagina geplaatst worden. Houd deze dus goed in de gaten. Na inschrijving zal je natuurlijk via de mail op de hoogte worden gehouden van de vorderingen omtrent de Coronasituatie.
               </p><br><br>
+
+              <h4 class="text-black">
+                UPDATE <small>6 augustus 2020</small>
+              </h4>
+
+              <p>Uit de persconferentie van 6 augustus is gebleken dat de introductieperiode dit jaar op een andere manier zal verlopen dan normaal. Omdat dit nieuws allemaal vrij recent is, is er nog veel onduidelijkheid.</p>
+
+              <p>Momenteel moeten wij afwachten wat de concrete plannen worden, maar wij zijn hard bezig om vooralsnog iedereen de mogelijkheid te geven om kennis te maken met onze mooie vereniging.</p>
+
+              <p>Hou onze website en sociale media in de gaten om op de hoogte gehouden te worden. Bij verdere vragen kan er een mail gestuurd worden naar
+                <a href="mailto:info@nonomes.nl.">info@nonomes.nl.</a>
+              </p>
             </article>
           </mdb-col>
         </mdb-row>
