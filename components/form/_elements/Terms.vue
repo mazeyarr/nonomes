@@ -22,6 +22,7 @@
 
     <p class="pl-4 mt-2 font-italic">* Het kennismakingsweekend zal plaatsvinden van 11-13 september</p>
     <p class="pl-4 mt-2 font-italic">* Onder voorbehoud wegens COVID-19</p>
+    <p class="pl-4 mt-2 font-italic">* <b>Dames</b>, Omdat we veel inschrijvingen hebben werken wij op het moment met een wachtrij. </p>
   </mdb-view>
 </template>
 
