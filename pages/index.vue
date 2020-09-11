@@ -109,11 +109,11 @@
             >
               <template v-slot:footer>
                 <div class="w-100 d-flex justify-content-center">
-                  <div>
-                    <GuestModalTrigger :modal-id="2" type="button" block color="success">
-                      Ik wil mij inschrijven!
-                    </GuestModalTrigger>
-                  </div>
+<!--                  <div>-->
+<!--                    <GuestModalTrigger :modal-id="2" type="button" block color="success">-->
+<!--                      Ik wil mij inschrijven!-->
+<!--                    </GuestModalTrigger>-->
+<!--                  </div>-->
                 </div>
               </template>
             </SectionContent>

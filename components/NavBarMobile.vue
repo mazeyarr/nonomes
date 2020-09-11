@@ -75,11 +75,11 @@
           Foto's
         </mdb-nav-item>
 
-        <GuestModalTrigger :modal-id="2" type="in-case">
-          <mdb-nav-item anchor-class="white-text">
-            Word lid!
-          </mdb-nav-item>
-        </GuestModalTrigger>
+<!--        <GuestModalTrigger :modal-id="2" type="in-case">-->
+<!--          <mdb-nav-item anchor-class="white-text">-->
+<!--            Word lid!-->
+<!--          </mdb-nav-item>-->
+<!--        </GuestModalTrigger>-->
 
         <mdb-nav-item
           anchor-class="white-text"

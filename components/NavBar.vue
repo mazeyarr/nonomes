@@ -69,11 +69,11 @@
             Foto's
           </mdb-nav-item>
 
-          <GuestModalTrigger :modal-id="2" type="in-case">
-            <mdb-nav-item anchor-class="white-text">
-              Word lid!
-            </mdb-nav-item>
-          </GuestModalTrigger>
+<!--          <GuestModalTrigger :modal-id="2" type="in-case">-->
+<!--            <mdb-nav-item anchor-class="white-text">-->
+<!--              Word lid!-->
+<!--            </mdb-nav-item>-->
+<!--          </GuestModalTrigger>-->
         </mdb-navbar-nav>
         <nuxt-link to="/" class="brand-image-link d-none d-sm-block">
           <img id="brand" src="@/static/images/nonomes_wapen.png" alt="Logo">
@@ -87,13 +87,13 @@
             Activiteiten
           </mdb-nav-item>
 
-          <mdb-nav-item
-            anchor-class="white-text"
-            to="/over/nonomes/disputen"
-            :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"
-          >
-            Disputen
-          </mdb-nav-item>
+<!--          <mdb-nav-item-->
+<!--            anchor-class="white-text"-->
+<!--            to="/over/nonomes/disputen"-->
+<!--            :class="activeRoute === '/over/nonomes/disputen' ? 'active' : ''"-->
+<!--          >-->
+<!--            Disputen-->
+<!--          </mdb-nav-item>-->
 
           <!--          <mdb-nav-item-->
           <!--            anchor-class="white-text"-->
