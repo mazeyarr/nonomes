@@ -103,38 +103,38 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
           alt: 'Bankr',
           show: false
         },
-        {
-          id: 2,
-          name: 'Studeersnel',
-          imgSrc: '/images/sponsors/sponsor-2.png',
-          link: '',
-          alt: 'Studeersnel',
-          show: false
-        },
-        {
-          id: 3,
-          name: 'EasySwitch',
-          imgSrc: '/images/sponsors/sponsor-3.png',
-          link: 'https://www.easyswitch.nl/energie-vergelijken/',
-          alt: 'EasySwitch',
-          show: false
-        },
-        {
-          id: 4,
-          name: 'Overstappen',
-          imgSrc: '/images/sponsors/sponsor-4.png',
-          link: 'http://overstappen.nl',
-          alt: 'Overstappen',
-          show: false
-        },
-        {
-          id: 5,
-          name: 'Auto Verzekeringen',
-          imgSrc: '/images/sponsors/sponsor-5.png',
-          link: 'https://www.autoverzekering.nl/',
-          alt: 'Auto Verzekeringen',
-          show: false
-        },
+        // {
+        //   id: 2,
+        //   name: 'Studeersnel',
+        //   imgSrc: '/images/sponsors/sponsor-2.png',
+        //   link: '',
+        //   alt: 'Studeersnel',
+        //   show: false
+        // },
+        // {
+        //   id: 3,
+        //   name: 'EasySwitch',
+        //   imgSrc: '/images/sponsors/sponsor-3.png',
+        //   link: 'https://www.easyswitch.nl/energie-vergelijken/',
+        //   alt: 'EasySwitch',
+        //   show: false
+        // },
+        // {
+        //   id: 4,
+        //   name: 'Overstappen',
+        //   imgSrc: '/images/sponsors/sponsor-4.png',
+        //   link: 'http://overstappen.nl',
+        //   alt: 'Overstappen',
+        //   show: false
+        // },
+        // {
+        //   id: 5,
+        //   name: 'Auto Verzekeringen',
+        //   imgSrc: '/images/sponsors/sponsor-5.png',
+        //   link: 'https://www.autoverzekering.nl/',
+        //   alt: 'Auto Verzekeringen',
+        //   show: false
+        // },
         {
           id: 6,
           name: 'Becam Financiëren',
@@ -143,14 +143,14 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
           alt: 'Becam Financiëren',
           show: false
         },
-        {
-          id: 7,
-          name: 'Best4ugroup',
-          imgSrc: '/images/sponsors/sponsor-7.png',
-          link: 'https://www.best4u.nl/',
-          alt: 'Best4ugroup',
-          show: false
-        },
+        // {
+        //   id: 7,
+        //   name: 'Best4ugroup',
+        //   imgSrc: '/images/sponsors/sponsor-7.png',
+        //   link: 'https://www.best4u.nl/',
+        //   alt: 'Best4ugroup',
+        //   show: false
+        // },
         {
           id: 8,
           name: 'Dakdek-Gigant',
@@ -167,22 +167,22 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
           alt: 'Drukbedrijf',
           show: false
         },
-        {
-          id: 10,
-          name: 'Geld.nl',
-          imgSrc: '/images/sponsors/sponsor-10.png',
-          link: 'https://www.geld.nl/',
-          alt: 'Geld.nl',
-          show: false
-        },
-        {
-          id: 11,
-          name: 'Huizenmarkt',
-          imgSrc: '/images/sponsors/sponsor-11.png',
-          link: 'https://www.huizenmarkt.nl',
-          alt: 'Huizenmarkt',
-          show: false
-        },
+        // {
+        //   id: 10,
+        //   name: 'Geld.nl',
+        //   imgSrc: '/images/sponsors/sponsor-10.png',
+        //   link: 'https://www.geld.nl/',
+        //   alt: 'Geld.nl',
+        //   show: false
+        // },
+        // {
+        //   id: 11,
+        //   name: 'Huizenmarkt',
+        //   imgSrc: '/images/sponsors/sponsor-11.png',
+        //   link: 'https://www.huizenmarkt.nl',
+        //   alt: 'Huizenmarkt',
+        //   show: false
+        // },
         {
           id: 12,
           name: 'Inshared',
@@ -231,54 +231,54 @@ Mocht u interesse hebben in een samenwerking met onze studentenvereniging of mee
           alt: 'Radio-introExpert',
           show: false
         },
-        {
-          id: 18,
-          name: 'Uitvaartverzekering',
-          imgSrc: '/images/sponsors/sponsor-18.png',
-          link: 'https://www.uitvaartverzekering.nl',
-          alt: 'Uitvaartverzekering',
-          show: false
-        },
-        {
-          id: 19,
-          name: 'Uitvaartverzekering.nl',
-          imgSrc: '/images/sponsors/sponsor-19.png',
-          link: 'https://www.uitvaartverzekering.nl',
-          alt: 'Uitvaartverzekering.nl',
-          show: false
-        },
-        {
-          id: 20,
-          name: 'hoyhoy',
-          imgSrc: '/images/sponsors/sponsor-20.JPG',
-          link: 'https://www.hoyhoy.nl/energievergelijker/',
-          alt: 'hoyhoy',
-          show: false
-        },
-        {
-          id: 21,
-          name: 'Skepp',
-          imgSrc: '/images/sponsors/sponsor-21.jpg',
-          link: 'https://skepp.nl/nl/',
-          alt: 'Skepp',
-          show: false
-        },
-        {
-          id: 22,
-          name: 'Pricewise',
-          imgSrc: '/images/sponsors/sponsor-22.gif',
-          link: 'https://www.pricewise.nl/energie-vergelijken',
-          alt: 'Pricewise',
-          show: false
-        },
-        {
-          id: 23,
-          name: 'United Consumers',
-          imgSrc: '/images/sponsors/sponsor-23.jpg',
-          link: '',
-          alt: 'United Consumers',
-          show: false
-        }
+        // {
+        //   id: 18,
+        //   name: 'Uitvaartverzekering',
+        //   imgSrc: '/images/sponsors/sponsor-18.png',
+        //   link: 'https://www.uitvaartverzekering.nl',
+        //   alt: 'Uitvaartverzekering',
+        //   show: false
+        // },
+        // {
+        //   id: 19,
+        //   name: 'Uitvaartverzekering.nl',
+        //   imgSrc: '/images/sponsors/sponsor-19.png',
+        //   link: 'https://www.uitvaartverzekering.nl',
+        //   alt: 'Uitvaartverzekering.nl',
+        //   show: false
+        // },
+        // {
+        //   id: 20,
+        //   name: 'hoyhoy',
+        //   imgSrc: '/images/sponsors/sponsor-20.JPG',
+        //   link: 'https://www.hoyhoy.nl/energievergelijker/',
+        //   alt: 'hoyhoy',
+        //   show: false
+        // },
+        // {
+        //   id: 21,
+        //   name: 'Skepp',
+        //   imgSrc: '/images/sponsors/sponsor-21.jpg',
+        //   link: 'https://skepp.nl/nl/',
+        //   alt: 'Skepp',
+        //   show: false
+        // },
+        // {
+        //   id: 22,
+        //   name: 'Pricewise',
+        //   imgSrc: '/images/sponsors/sponsor-22.gif',
+        //   link: 'https://www.pricewise.nl/energie-vergelijken',
+        //   alt: 'Pricewise',
+        //   show: false
+        // },
+        // {
+        //   id: 23,
+        //   name: 'United Consumers',
+        //   imgSrc: '/images/sponsors/sponsor-23.jpg',
+        //   link: '',
+        //   alt: 'United Consumers',
+        //   show: false
+        // }
       ]
     }
   },
