@@ -223,6 +223,14 @@ export default {
         //   alt: 'United Consumers',
         //   show: false
         // }
+        {
+          id: 24,
+          name: 'SunnyMondkapje',
+          imgSrc: '/images/sponsors/sponsor-24.jpg',
+          link: 'https://sunnymondkapje.nl/',
+          alt: 'SunnyMondkapje',
+          show: false
+        }
       ]
     }
   },
