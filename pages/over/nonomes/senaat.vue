@@ -25,7 +25,18 @@
                       <strong><i>P</i></strong> raeses
                     </p>
                     <p>
-                      <mdb-icon icon="chess-king" class="text-green" /> A.E. Versteegh
+                      <mdb-icon icon="chess-king" class="text-green" /> W.J. Wijte
+                    </p>
+                    <a href="mailto:Praeses@nonomes.nl">
+                      <mdb-icon icon="envelope" class="text-blue" /> Praeses@nonomes.nl
+                    </a>
+                    <hr>
+
+                    <p class="dark-grey-text">
+                      <strong><i>V</i></strong> ice Praeses
+                    </p>
+                    <p>
+                      <mdb-icon icon="chess-king" class="text-green" /> E.A. Smits
                     </p>
                     <a href="mailto:Praeses@nonomes.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> Praeses@nonomes.nl
@@ -36,7 +47,7 @@
                       <strong><i>Ab</i></strong> Actis
                     </p>
                     <p>
-                      <mdb-icon icon="at" class="text-green" /> R.C. Bisschop
+                      <mdb-icon icon="at" class="text-green" /> C.J.T. Baart
                     </p>
                     <a href="mailto:Info@nonomes.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> Info@nonomes.nl
@@ -48,7 +59,7 @@
                       <strong><i>Q</i></strong>uaestor
                     </p>
                     <p>
-                      <mdb-icon icon="coins" class="text-green" /> S. Vis
+                      <mdb-icon icon="coins" class="text-green" /> D.E.T. Esajas
                     </p>
                     <a href="mailto:Quaestor@nonomes.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> Quaestor@nonomes.nl
@@ -64,7 +75,7 @@
             <mdb-row>
               <mdb-col>
                 <h2 class="text-black text-center">
-                  Senaat Versteegh
+                  Senaat Wijte
                 </h2>
               </mdb-col>
             </mdb-row>
@@ -96,7 +107,7 @@
                       <strong><i>V</i></strong>oorzitter
                     </p>
                     <p>
-                      <mdb-icon icon="user-tie" class="text-green" /> C.F.A. Zwijnenburg
+                      <mdb-icon icon="user-tie" class="text-green" /> R.Y. Heeneman
                     </p>
                     <a href="mailto:voorzitter@deheiligezeug.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> voorzitter@deheiligezeug.nl
@@ -107,7 +118,7 @@
                       <strong><i>P</i></strong>enning<strong>m</strong>eester
                     </p>
                     <p>
-                      <mdb-icon icon="hand-holding-usd" class="text-green" /> L. Geijtenbeek
+                      <mdb-icon icon="hand-holding-usd" class="text-green" /> I.C. Douma
                     </p>
                     <a href="mailto:penningmeester@deheiligezeug.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> penningmeester@deheiligezeug.nl
@@ -115,10 +126,10 @@
                     <hr>
 
                     <p class="dark-grey-text">
-                      <strong><i>S</i></strong>ecretaris
+                      <strong><i>A</i></strong>ssessor Sociëteit
                     </p>
                     <p>
-                      <mdb-icon icon="newspaper" class="text-green" /> T. van Baar
+                      <mdb-icon icon="newspaper" class="text-green" /> M. van den Bosch
                     </p>
                     <a href="mailto:info@deheiligezeug.nl">
                       <mdb-icon icon="envelope" class="text-blue" /> info@deheiligezeug.nl
